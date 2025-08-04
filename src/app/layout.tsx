@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Elias Rougier Fit - Baja entre 5 y 15 kilogramos de grasa con mi metodo ERF para adultos ocupados",
-  description: "Elias Rougier Fit - Baja entre 5 y 15 kilogramos de grasa con mi metodo ERF para adultos ocupados",
+  title: "Nano Ponce Fit - Baja entre 5 y 15 kilogramos de grasa con mi metodo ERF para adultos ocupados",
+  description: "Nano Ponce Fit - Baja entre 5 y 15 kilogramos de grasa con mi metodo ERF para adultos ocupados",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1291017362414674');
+              fbq('init', 'PIXEL_ID');
               fbq('track', 'PageView');
             `,
           }}
@@ -37,24 +37,10 @@ export default function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1291017362414674&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1"
           />
         </noscript>
 
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function(h,o,t,j,a,r){
-              h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-              h._hjSettings={hjid:6472159,hjsv:6};
-              a=o.getElementsByTagName('head')[0];
-              r=o.createElement('script');r.async=1;
-              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-              a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-            `
-          }}
-        />
       </head>
       <body>
         {children}

@@ -99,7 +99,7 @@ export default function Calendly() {
 								de cómo bajar de peso de un experto certificado.
 							</p>
 							<div className="mt-8 hidden md:block">
-								<img className="h-[40px]" src="/images/eli-reviews.png" alt="Elias Rougier Fitness" />
+								<img className="h-[40px]" src="/images/eli-reviews.png" alt="Nano Ponce Fitness" />
 							</div>
 						</div>
 						{/* CALENDLY 1 (USE A PERSON PHOTO AND NAME - NO LOGO) */}
@@ -111,7 +111,7 @@ export default function Calendly() {
 							></div>
 						</div>
 						<div className="mt-8 md:hidden block mx-auto">
-							<img className="h-[40px]" src="/images/eli-reviews.png" alt="Elias Rougier Fitness" />
+							<img className="h-[40px]" src="/images/eli-reviews.png" alt="Nano Ponce Fitness" />
 						</div>
 					</div>
 				</div>
@@ -164,23 +164,23 @@ export default function Calendly() {
 					<div className="grid md:grid-cols-3 gap-4 mt-8">
 						<div>
 							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Meses</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-1.webp" alt="Elias Rougier Fit - Cambio 1" />
+							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
 						</div>
 						<div>
 							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Meses</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-2.webp" alt="Elias Rougier Fit - Cambio 2" />
+							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
 						</div>
 						<div>
 							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-3.webp" alt="Elias Rougier Fit - Cambio 3" />
+							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
 						</div>
 						<div>
 							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-4.webp" alt="Elias Rougier Fit - Cambio 3" />
+							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
 						</div>
 						<div>
 							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-5.webp" alt="Elias Rougier Fit - Cambio 3" />
+							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
 						</div>
 					</div>
 				</div>

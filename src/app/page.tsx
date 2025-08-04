@@ -157,23 +157,23 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-4 mt-8">
             <div>
               <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Meses</p>
-              <img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-1.webp" alt="Elias Rougier Fit - Cambio 1" />
+              <img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
             </div>
             <div>
               <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Meses</p>
-              <img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-2.webp" alt="Elias Rougier Fit - Cambio 2" />
+              <img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
             </div>
             <div>
               <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-              <img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-3.webp" alt="Elias Rougier Fit - Cambio 3" />
+              <img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
             </div>
 						<div>
 							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-4.webp" alt="Elias Rougier Fit - Cambio 3" />
+							<img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
 						</div>
 						<div>
 							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-5.webp" alt="Elias Rougier Fit - Cambio 3" />
+							<img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
 						</div>
           </div>
           <button

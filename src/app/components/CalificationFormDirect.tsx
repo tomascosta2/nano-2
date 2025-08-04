@@ -283,7 +283,7 @@ export default function CalificationFormDirect() {
 							>
 								<path
 									d="M6.41318 11.6364L5.09499 10.3296L8.55522 6.86932H0.447266V4.94887H8.55522L5.09499 1.49432L6.41318 0.181824L12.1404 5.9091L6.41318 11.6364Z"
-									fill="#FFF"></path>
+									fill="#000"></path>
 							</svg>
 						)}
 					</button>
