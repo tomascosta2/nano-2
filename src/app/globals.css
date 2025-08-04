@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+body {
+	background-color: #111;
+	color: white;
+	font-family: 'Inter Variable', sans-serif;
+}
+
+:root {
+	--primary: #fbff00;
+	--background: #111;
+}
+
+/* Scroll */
+* {
+	scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track,
+body {
+	background-color: var(--background);
+	overflow-x: clip;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--primary) !important;
+	border-radius: 20px;
+	border: 5px solid var(--background);
+}
+
+.bgPrimary {
+	background-color: var(--primary);
+}
+
+.cf-container {
+	@apply max-w-[1020px] mx-auto px-4;
+}
+.cf-btn {
+	@apply flex items-center justify-center gap-2 rounded-lg w-full py-6 font-semibold text-black cursor-pointer text-center max-w-[400px] mx-auto;
+	background-color: var(--primary);
+}
