@@ -54,7 +54,7 @@ export default function Home() {
             Si ya intentaste de todo y nada te funcionó, es porque nadie diseñó un método que se adapte a tu vida real. Hasta ahora.
           </p> */}
           <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
-            BAJA ENTRE <span className="text-[#fbff00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON EL <span className="text-[#fbff00]">MÉTODO ERF</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+            BAJA ENTRE <span className="text-[#fbff00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON EL <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
           </h1>
           <p className="mt-4 text-center max-w-[900px] mx-auto">
             <strong className="underline">Paso 1:</strong> Hace clic en el video, llena el formulario y mirá el video completo.
@@ -227,7 +227,7 @@ export default function Home() {
             poco tiempo, mucho estrés, y cero ganas de pasar hambre.
           </p>
           <p className="mt-4 text-white/80 text-[18px] md:text-[18px]">
-            El Método ERF ya ayudó a decenas de hombres a transformar su físico y recuperar su confianza.
+            El Método FIT90 ya ayudó a decenas de hombres a transformar su físico y recuperar su confianza.
             Y ahora te toca a vos.
           </p>
           <p className="mt-4 text-white/90 font-semibold text-[18px]">

@@ -40,7 +40,7 @@ export default function Home() {
       <section className="pt-8 pb-[60px] md:pb-[80px]">
         <div className="cf-container">
           <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
-            BAJA ENTRE <span className="text-[#fbff00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON EL <span className="text-[#fbff00]">MÉTODO ERF</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+            BAJA ENTRE <span className="text-[#fbff00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON EL <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
           </h1>
           <p className="mt-4 text-center max-w-[700px] mx-auto">
             Mirá el video completo, y aplicalo por tu cuenta o agenda una llamada para asegurar tu transformación.
@@ -54,7 +54,7 @@ export default function Home() {
             <div
               className="bg-gray-300 aspect-video rounded-br-[8px] md:rounded-br-[12px] rounded-bl-[8px] md:rounded-bl-[12px]"
             >
-              <iframe className="w-full h-full" src="https://fast.wistia.net/embed/iframe/i6xroh8x39?web_component=true&seo=true&videoFoam=false" title="ERF-VSL Video" allow="autoplay; fullscreen" frameBorder="0" scrolling="no" name="wistia_embed"></iframe>
+              <iframe className="w-full h-full" src="https://fast.wistia.net/embed/iframe/i6xroh8x39?web_component=true&seo=true&videoFoam=false" title="FIT90-VSL Video" allow="autoplay; fullscreen" frameBorder="0" scrolling="no" name="wistia_embed"></iframe>
               <script src="https://fast.wistia.net/player.js" async></script>
             </div>
           </div>

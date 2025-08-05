@@ -30,33 +30,33 @@ export default function Home() {
           <h3
             className="text-center text-black text-[18px] py-3 font-bold leading-[115%]"
           >
-            SOLO PARA HOMBRES +27 OCUPADOS CON SU TRABAJO Y FAMILIA
+            SOLO PARA HOMBRES +30 OCUPADOS CON SU TRABAJO Y FAMILIA
           </h3>
         </div>
       </header>
       <section className="pt-8 md:pt-14 pb-[60px] md:pb-[80px]">
         <div className="cf-container">
           <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
-            BAJA ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL</span> EN 3 MESES - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+            BAJA ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL</span> EN 3 MESES CON EL MÉTODO <span className="text-[#fbff00]">FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
           </h1>
           <p className="mt-4 text-center max-w-[700px] mx-auto">
             Mirá el video completo, y aplicalo por tu cuenta o agenda una llamada para asegurar tu transformación.
           </p>
           <section className="relative">
             <div
-            className="border-4 overflow-clip rounded-[12px] md:rounded-[16px] border-[#fbff00] mt-8 max-w-[750px] mx-auto"
-          >
-            <div className="p-2 text-center text-black font-bold bg-[#fbff00]">
-              CLIC PARA ACTIVAR EL SONIDO
+              className="border-4 overflow-clip rounded-[12px] md:rounded-[16px] border-[#fbff00] mt-8 max-w-[750px] mx-auto"
+            >
+              <div className="p-2 text-center text-black font-bold bg-[#fbff00]">
+                CLIC PARA ACTIVAR EL SONIDO
+              </div>
+              <div
+                className="bg-gray-300 aspect-video rounded-br-[8px] md:rounded-br-[12px] rounded-bl-[8px] md:rounded-bl-[12px]"
+              >
+                <iframe src="https://fast.wistia.net/embed/iframe/muihc6sd9j?web_component=true&seo=true" title="2025-08-02 17-06-03 Video" allow="autoplay; fullscreen" scrolling="no" className="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
+                <script src="https://fast.wistia.net/player.js" async></script>
+              </div>
             </div>
-            <div
-              className="bg-gray-300 aspect-video rounded-br-[8px] md:rounded-br-[12px] rounded-bl-[8px] md:rounded-bl-[12px]"
-            >              
-              <iframe src="https://fast.wistia.net/embed/iframe/muihc6sd9j?web_component=true&seo=true" title="2025-08-02 17-06-03 Video" allow="autoplay; fullscreen" scrolling="no" className="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
-              <script src="https://fast.wistia.net/player.js" async></script>
-            </div>
-          </div>
-          <div className="bg-[#fbff00] size-[350px] md:size-[700px] top-0 md:-top-[100px] blur-[100px] opacity-[70%] rounded-full absolute left-[calc(50%-175px)] md:left-[calc(50%-350px)] -z-50"></div>
+            <div className="bg-[#fbff00] size-[350px] md:size-[700px] top-0 md:-top-[100px] blur-[100px] opacity-[70%] rounded-full absolute left-[calc(50%-175px)] md:left-[calc(50%-350px)] -z-50"></div>
           </section>
           <div className="mt-8">
             <button
@@ -95,25 +95,26 @@ export default function Home() {
             {
               VIDEO_TESTIMONIALS.map((testimonial) => {
                 return (
-                  <div className="p-8 md:p-[50px] border rounded-[20px] border-white/20 flex md:flex-row flex-col gap-4 md:gap-8">
-                    <div className="w-full md:min-w-[360px] aspect-video rounded-[10px] overflow-hidden">
-                      <iframe
-                        className="w-full h-full"
-                        src={testimonial.video}
-                        title={testimonial.titulo}
-                        allow="autoplay; fullscreen"
-                        frameBorder="0"
-                        scrolling="no"
-                      ></iframe>
-                    </div>
-                    <div className="py-4 flex flex-col justify-between">
-                      <div>
-                        <h3 className="text-[24px] font-bold">{testimonial.titulo}</h3>
-                        <p className="text-white/80 mt-4">{testimonial.story}</p>
+                  <div className="p-2 rounded-[24px] relative overflow-clip">
+                    <div className="bg-[#fbff00] size-[600px] md:size-[700px] top-0 md:-top-[100px] blur-[100px] opacity-[70%] rounded-full absolute left-[calc(50%-300px)] md:left-[calc(50%-350px)] -z-50"></div>
+                    <div className="relative bg-[#111] z-50 p-8 md:p-[50px] rounded-[20px] flex md:flex-row flex-col gap-4 md:gap-8">
+                      <div className="w-full md:min-w-[360px] aspect-video rounded-[10px] overflow-hidden">
+                        <iframe
+                          className="w-full h-full"
+                          src={testimonial.video}
+                          title={testimonial.titulo}
+                          allow="autoplay; fullscreen"
+                        ></iframe>
                       </div>
-                      <div className="mt-4">
-                        <p>{testimonial.nombre}</p>
-                        <p className="text-white/80 mt-2 text-[14px]">{testimonial.dato}</p>
+                      <div className="py-4 flex flex-col justify-between">
+                        <div>
+                          <h3 className="text-[24px] font-bold">{testimonial.titulo}</h3>
+                          <p className="text-white/80 mt-4">{testimonial.story}</p>
+                        </div>
+                        <div className="mt-4">
+                          <p>{testimonial.nombre}</p>
+                          <p className="text-white/80 mt-2 text-[14px]">{testimonial.dato}</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -154,28 +155,50 @@ export default function Home() {
           </h2>
           <p className="text-white/80 text-center mt-4 max-w-[400px] mx-auto">Si ellos pudieron, vos también podés. Solo necesitás un método pensado específicamente para vos.</p>
 
-          <div className="grid md:grid-cols-3 gap-4 mt-8">
-            <div>
-              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Meses</p>
-              <img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
-            </div>
-            <div>
-              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Meses</p>
-              <img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
-            </div>
-            <div>
-              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-              <img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
-            </div>
+					<div className="grid md:grid-cols-3 gap-4 mt-8">
 						<div>
-							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* Mateo Falco */}
+								-17 KG en 3 Meses
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
 						</div>
 						<div>
-							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] h-full object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* ⁠Agustín Santoro */}
+								-6 KG en 1 Mes
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
 						</div>
-          </div>
+						<div>
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* Cristian Ponce */}
+								-4 KG en 1 Mes
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
+						</div>
+						<div>
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* ⁠Mauricio Cano */}
+								-5 KG en 1 Mes
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
+						</div>
+						<div>
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* Siro González */}
+								-5.5 KG en menos de 1 Mes
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
+						</div>
+						<div>
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* Mateo Tombesi */}
+								-8 KG en 2 Meses
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-6.webp" alt="Nano Ponce Fit - Cambio 3" />
+						</div>
+					</div>
           <button
             className="cf-btn mt-8"
             onClick={() => { setIsFormOpened(true) }}

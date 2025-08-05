@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nano Ponce Fit - Baja entre 5 y 15 kilogramos de grasa con mi metodo ERF para adultos ocupados",
-  description: "Nano Ponce Fit - Baja entre 5 y 15 kilogramos de grasa con mi metodo ERF para adultos ocupados",
+  title: "Nano Ponce Fit - Baja entre 5 y 15 kilogramos de grasa con mi metodo FIT90 para adultos ocupados",
+  description: "Nano Ponce Fit - Baja entre 5 y 15 kilogramos de grasa con mi metodo FIT90 para adultos ocupados",
 };
 
 export default function RootLayout({

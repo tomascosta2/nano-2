@@ -85,7 +85,7 @@ export default function Calendly() {
 					<div className="grid md:grid-cols-2 gap-8">
 						<div className="md:-order-1 order-2">
 							<h2 className="text-[20px] sm:text-[28px] font-bold leading-[120%] mb-6 sm:mb-8 text-white">
-								Nuestros clientes bajan entre 5 y 15 kg de grasa corporal en 3
+								Nuestros clientes bajan entre 6 y 15 kg de grasa corporal en 3
 								meses. <span className="underline">Vos también podés</span>.
 								Agenda una llamada y vamos a hablar de:
 							</h2>
@@ -106,7 +106,7 @@ export default function Calendly() {
 						<div className="bg-white w-full min-h-[600px] rounded-lg overflow-clip">
 							<div
 								className="calendly-inline-widget"
-								data-url="https://calendly.com/elifit/asesoria?hide_gdpr_banner=1"
+						data-url="https://calendly.com/marianoponce2002/45min?hide_gdpr_banner=1"
 								style={{ minWidth: "320px", height: "800px" }}
 							></div>
 						</div>
@@ -159,28 +159,58 @@ export default function Calendly() {
 			</section>
 
 			{/* VERY CREDIBLE SOCIAL PROOF */}
+			{/* 
+				* Mateo Falco -17 kg en 3 meses 
+				* ⁠Agustín Santoro -6 en 1 mes
+				* ⁠Cristian Ponce -4 kg en 1 mes
+				* ⁠Mauricio Cano -5 kg en 1 mes
+				* ⁠Siro González -5,5 kg en - mes
+				* Mateo Tombesi -8 kg en 2 meses
+			*/}
 			<section className="py-[40px] px-4">
 				<div className="max-w-[1200px] mx-auto">
 					<div className="grid md:grid-cols-3 gap-4 mt-8">
 						<div>
-							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Meses</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* Mateo Falco */}
+								-17 KG en 3 Meses
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
 						</div>
 						<div>
-							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Meses</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* ⁠Agustín Santoro */}
+								-6 KG en 1 Mes
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
 						</div>
 						<div>
-							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* Cristian Ponce */}
+								-4 KG en 1 Mes
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
 						</div>
 						<div>
-							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* ⁠Mauricio Cano */}
+								-5 KG en 1 Mes
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
 						</div>
 						<div>
-							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">-X KG en Y Mes</p>
-							<img className="w-full max-h-[290px] object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* Siro González */}
+								-5.5 KG en menos de 1 Mes
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
+						</div>
+						<div>
+							<p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+								{/* Mateo Tombesi */}
+								-8 KG en 2 Meses
+							</p>
+							<img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-6.webp" alt="Nano Ponce Fit - Cambio 3" />
 						</div>
 					</div>
 				</div>
@@ -191,7 +221,7 @@ export default function Calendly() {
 					{/* CALENDLY 2 (USE A PERSON PHOTO AND NAME - NO LOGO) */}
 					<div
 						className="calendly-inline-widget"
-						data-url="https://calendly.com/elifit/asesoria?hide_gdpr_banner=1"
+						data-url="https://calendly.com/marianoponce2002/45min?hide_gdpr_banner=1"
 						style={{ minWidth: "100%", height: "800px" }}
 					></div>
 				</div>

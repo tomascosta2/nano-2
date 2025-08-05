@@ -280,7 +280,7 @@ export default function CalificationForm() {
 					>
 						{loading ? "Cargando..." : "QUIERO VER COMO FUNCIONA"}
 					</button>
-					<p className="text-white/80 mt-4 text-[12px]">PD: El método ERF está diseñado para hombres ocupados, no es la típica rutina de influencer que solo puede cumplir un adolescente que vive con los padres.</p>
+					<p className="text-white/80 mt-4 text-[12px]">PD: El método FIT90 está diseñado para hombres ocupados, no es la típica rutina de influencer que solo puede cumplir un adolescente que vive con los padres.</p>
 				</form>
 			</div>
 		</div>
