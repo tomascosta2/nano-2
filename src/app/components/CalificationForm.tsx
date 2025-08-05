@@ -84,7 +84,7 @@ export default function CalificationForm() {
 				...data,
 				variant
 			}
-			await fetch(`https://hook.us2.make.com/11r8nwyaw87mlsu9e8a4t1yt9s5q4ul8`, {
+			await fetch(`https://hook.us2.make.com/4440nxy5471reiw1q18qotjc15rveijb`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify([payload]),
