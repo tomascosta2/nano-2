@@ -11,10 +11,10 @@ export default function Home() {
   const VIDEO_TESTIMONIALS = [
     {
       video: "https://fast.wistia.net/embed/iframe/eowyh45vlt?web_component=true&seo=true",
-      titulo: "Mateo...",
+      titulo: "Mateo bajo 17 KG en SOLO 3 meses",
       story: "Antes me miraba de reojo y me veía espantoso... Son 90 días que me cambiaron la vida. Es un cambio gigante no solo para mi cuerpo, sino también para mi mentalidad.",
-      nombre: "Mateo APELLIDO",
-      dato: "EDAD || Buenos Aires",
+      nombre: "Mateo Falco",
+      dato: "Buenos Aires, Argentina",
     },
   ];
 
@@ -89,7 +89,7 @@ export default function Home() {
           <h2
             className="text-[28px] font-bold text-white text-center uppercase max-w-[500px] leading-[120%] mx-auto"
           >
-            ELLOS YA LO LOGRARON ¿QUE ESTAS ESPERANDO?
+            MATEO LO LOGRO ¿QUE ESTAS ESPERANDO?
           </h2>
           <div className="mt-8 max-w-[900px] mx-auto space-y-6">
             {
@@ -108,7 +108,7 @@ export default function Home() {
                       </div>
                       <div className="py-4 flex flex-col justify-between">
                         <div>
-                          <h3 className="text-[24px] font-bold">{testimonial.titulo}</h3>
+                          <h3 className="text-[24px] leading-[120%] font-bold">{testimonial.titulo}</h3>
                           <p className="text-white/80 mt-4">{testimonial.story}</p>
                         </div>
                         <div className="mt-4">
