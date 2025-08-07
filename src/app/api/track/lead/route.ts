@@ -15,7 +15,7 @@ export async function POST(req: Request) {
 
   // Enviamos los leads calificados mediante la API
   await fetch(
-    `https://graph.facebook.com/v18.0/PIXEL_ID/events?access_token=${process.env.API_ACCESS_TOKEN}`,
+    `https://graph.facebook.com/v18.0/1949269322592371/events?access_token=${process.env.API_ACCESS_TOKEN}`,
     {
       method: 'POST',
       headers: {
