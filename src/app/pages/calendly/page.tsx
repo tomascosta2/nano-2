@@ -99,7 +99,7 @@ export default function Calendly() {
 								de cómo bajar de peso de un experto certificado.
 							</p>
 							<div className="mt-8 hidden md:block">
-								<img className="h-[40px]" src="/images/eli-reviews.png" alt="Nano Ponce Fitness" />
+								<img className="h-[40px]" src="/images/reviews-nano.png" alt="Nano Ponce Fitness" />
 							</div>
 						</div>
 						{/* CALENDLY 1 (USE A PERSON PHOTO AND NAME - NO LOGO) */}
@@ -111,7 +111,7 @@ export default function Calendly() {
 							></div>
 						</div>
 						<div className="mt-8 md:hidden block mx-auto">
-							<img className="h-[40px]" src="/images/eli-reviews.png" alt="Nano Ponce Fitness" />
+							<img className="h-[40px]" src="/images/reviews-nano.png" alt="Nano Ponce Fitness" />
 						</div>
 					</div>
 				</div>
