@@ -13,11 +13,11 @@ const PREGUNTAS = {
 	},
 	presupuesto: {
 		label:
-			"¿Qué tipo solución estás buscando para transformar tu físico? *",
+			"Sabiendo que con mi programa y acompañamiento vas a bajar entre 6 y 15kg en menos de 90 dias, ¿Cuanto estarias dispuesto a invertir? *",
 		opciones: [
-			{ value: "presupuesto-bajo", label: "Quiero una solución económica para empezar por mi cuenta." },
-			{ value: "presupuesto-intermedio", label: "Quiero un plan serio, que justifique la inversión." },
-			{ value: "presupuesto-alto", label: "Quiero la mejor opción disponible, independientemente del precio." },
+			{ value: "presupuesto-bajo", label: "Menos de usd170, quiero una solución económica para aplicar por mi cuenta." },
+			{ value: "presupuesto-intermedio", label: "Cuento con usd170 para empezar. PD: No es el total, pero podemos empezar a trabajar." },
+			{ value: "presupuesto-alto", label: "Cuento con usd450 para invertir en mi cambio." },
 		],
 	},
 };
