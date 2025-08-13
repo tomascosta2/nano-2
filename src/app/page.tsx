@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-[40px]">
+      <section className="py-[40px] relative z-20">
         <div className="cf-container">
           <h2
             className="text-[28px] font-bold text-white text-center uppercase max-w-[500px] leading-[120%] mx-auto"

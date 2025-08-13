@@ -3,12 +3,21 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 
 const PREGUNTAS = {
-	urgencia: {
-		label: "¿Para cuándo te gustaría tener estos resultados? *",
+	// urgencia: {
+	// 	label: "¿Para cuándo te gustaría tener estos resultados? *",
+	// 	opciones: [
+	// 		{ value: "urgencia-baja", label: "Estoy bien físicamente" },
+	// 		{ value: "urgencia-intermedia", label: "En los proximos meses" },
+	// 		{ value: "urgencia-alta", label: "Ya mismo, necesito un cambio" },
+	// 	],
+	// },
+	edad: {
+		label: "¿En que rango de edad te encontras? *",
 		opciones: [
-			{ value: "urgencia-baja", label: "Estoy bien físicamente" },
-			{ value: "urgencia-intermedia", label: "En los proximos meses" },
-			{ value: "urgencia-alta", label: "Ya mismo, necesito un cambio" },
+			{ value: "menor", label: "Soy menor de edad" },
+			{ value: "joven", label: "18 - 24 años" },
+			{ value: "adulto", label: "24 - 44 años" },
+			{ value: "mayor", label: "+44 años" },
 		],
 	},
 	presupuesto: {
@@ -93,7 +102,7 @@ export default function CalificationFormDirect() {
 
 			const isQualified =
 				(data.presupuesto === 'presupuesto-intermedio' || data.presupuesto === 'presupuesto-alto') &&
-				(data.urgencia === 'urgencia-intermedia' || data.urgencia === 'urgencia-alta');
+				(data.edad === 'adulto' || data.edad === 'mayor');
 
 			// ✅ Guardar si está calificado
 			localStorage.setItem('isQualified', isQualified ? 'true' : 'false');
