@@ -181,9 +181,9 @@ export default function CalificationFormDirect({variant}: Props) {
 	return (
 		<div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
 			<div className="md:border md:border-white/20 md:rounded-[20px] py-[55px] px-[40px] bg-[#111] max-w-[500px] h-full md:max-h-[calc(100vh-80px)] overflow-y-auto">
-				<h2 className="mb-4 font-bold text-[18px] md:text-[22px] leading-[113%] italic">Completa el formulario para saber si somos un buen fit, y <span className="text-[#fbff00]">agenda tu consulta gratuita</span> para empezar tu cambio</h2>
+				<h2 className="mb-4 font-bold text-[22px] md:text-[22px] leading-[113%] italic">Completa el formulario para saber si somos un buen fit, y <span className="text-[#fbff00]">agenda tu consulta gratuita</span> para empezar tu cambio</h2>
 
-				<form onSubmit={handleSubmit(onSubmit)}>
+				<form className="text-[18px]" onSubmit={handleSubmit(onSubmit)}>
 					{/* Nombre */}
 					<label className="text-white block">
 						Nombre:
@@ -254,7 +254,7 @@ export default function CalificationFormDirect({variant}: Props) {
 							<div key={key} className="mt-6">
 								<p className="text-white font-medium mb-2">{pregunta.label}</p>
 								{pregunta.opciones.map((op) => (
-									<label key={op.value} className="flex items-center gap-2 mb-1">
+									<label key={op.value} className="flex items-center gap-2 mb-2">
 										<input
 											type="radio"
 											value={op.value}
