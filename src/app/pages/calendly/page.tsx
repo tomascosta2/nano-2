@@ -64,6 +64,10 @@ export default function Calendly() {
 						}),
 					});
 				}
+
+				setTimeout(() => {
+					window.location.href = '/pages/thankyou'; // Cambia la ruta a la de tu página de agradecimiento
+				}, 800);
 			}
 		};
 
