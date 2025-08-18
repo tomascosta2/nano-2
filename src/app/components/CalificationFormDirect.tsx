@@ -54,11 +54,11 @@ const PAISES = [
 	{ code: "+1-809", name: "República Dominicana", flag: "🇩🇴" },
 ]
 
-interface Props {
-	defaultEmail: string;
+type Props = {
+	variant: string;
 }
 
-export default function CalificationFormDirect() {
+export default function CalificationFormDirect({variant}: Props) {
 	const { register, handleSubmit, formState: { errors }, reset, watch } = useForm();
 
 	const [showRadios, setShowRadios] = useState(false)
@@ -87,7 +87,7 @@ export default function CalificationFormDirect() {
 
 			// Definimos si va a ser el test A o B
 			// const variant = Math.random() < 0.5 ? 'vsl-w-calendy' : 'vsl-w-button';
-			const variant = 'no-test';
+			// const variant = 'no-test';
 
 			// Enviamos los datos al Google Sheets
 			const payload = {

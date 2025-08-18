@@ -1,12 +1,16 @@
 'use client'
 import Script from "next/script";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import CalificationForm from "./components/CalificationForm";
 import CalificationFormDirect from "./components/CalificationFormDirect";
 
 export default function Home() {
 
   const [isFormOpened, setIsFormOpened] = useState(false);
+
+  const variantRef = useRef<'A' | 'B'>(Math.random() < 0.5 ? 'A' : 'B');
+  const variant = variantRef.current;
+  console.log(variant)
 
   const VIDEO_TESTIMONIALS = [
     {
@@ -22,7 +26,7 @@ export default function Home() {
     <div>
       {
         isFormOpened && (
-          <CalificationFormDirect />
+          <CalificationFormDirect variant={variant} />
         )
       }
       <header className="bg-[#fbff00]">
@@ -37,10 +41,19 @@ export default function Home() {
       <section className="pt-8 md:pt-14 pb-[60px] md:pb-[80px]">
         <div className="cf-container">
           <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
-            BAJA ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL</span> EN 3 MESES CON EL MÉTODO <span className="text-[#fbff00]">FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+            {variant === 'A' && (
+              <span>
+                BAJA ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL</span> EN 3 MESES CON EL MÉTODO <span className="text-[#fbff00]">FIT90</span> Y ACOMPAÑAMIENTO 1 A 1
+              </span>
+            )}
+            {variant === 'B' && (
+              <span>
+                BAJA ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL</span> EN 90 DÍAS CON EL MÉTODO <span className="text-[#fbff00]">FIT90</span> Y ACOMPAÑAMIENTO 1 A 1
+              </span>
+            )}
           </h1>
-          <p className="mt-4 text-center max-w-[700px] mx-auto">
-            Mirá el video completo, y aplicalo por tu cuenta o agenda una llamada para asegurar tu transformación.
+          <p className="mt-4 text-center max-w-[700px] mx-auto italic font-bold text-[18px]">
+            ...Sin Dietas Extremas Ni Rutinas Imposibles
           </p>
           <section className="relative">
             <div
