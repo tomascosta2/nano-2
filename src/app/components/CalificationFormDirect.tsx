@@ -3,14 +3,6 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 
 const PREGUNTAS = {
-	// urgencia: {
-	// 	label: "¿Para cuándo te gustaría tener estos resultados? *",
-	// 	opciones: [
-	// 		{ value: "urgencia-baja", label: "Estoy bien físicamente" },
-	// 		{ value: "urgencia-intermedia", label: "En los proximos meses" },
-	// 		{ value: "urgencia-alta", label: "Ya mismo, necesito un cambio" },
-	// 	],
-	// },
 	edad: {
 		label: "¿En que rango de edad te encontras? *",
 		opciones: [
