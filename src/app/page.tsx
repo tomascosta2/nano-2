@@ -43,17 +43,17 @@ export default function Home() {
           <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
             {variant === 'A' && (
               <span>
-                BAJA ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL</span> EN 3 MESES CON EL MÉTODO <span className="text-[#fbff00]">FIT90</span> Y ACOMPAÑAMIENTO 1 A 1
+                BAJA ENTRE <span className="text-[#ffcc00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON EL <span className="text-[#ffcc00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
               </span>
             )}
             {variant === 'B' && (
               <span>
-                BAJA ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL</span> EN 90 DÍAS CON EL MÉTODO <span className="text-[#fbff00]">FIT90</span> Y ACOMPAÑAMIENTO 1 A 1
+                BAJA ENTRE <span className="text-[#ffcc00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON MI <span className="text-[#ffcc00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
               </span>
             )}
           </h1>
-          <p className="mt-4 text-center max-w-[700px] mx-auto italic font-bold text-[18px]">
-            ...Sin Dietas Extremas Ni Rutinas Imposibles
+          <p className="mt-4 text-center max-w-[700px] mx-auto">
+            Mirá el video completo, y aplicalo por tu cuenta o agenda una llamada para asegurar tu transformación.
           </p>
           <section className="relative">
             <div
