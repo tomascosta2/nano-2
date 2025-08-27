@@ -55,6 +55,11 @@ export default function RootLayout({
         `}
       </Script>
 
+      <link rel="preconnect" href="https://assets.calendly.com" crossOrigin="" />
+      <link rel="preconnect" href="https://calendly.com" crossOrigin="" />
+      <link rel="dns-prefetch" href="https://assets.calendly.com" />
+      <link rel="dns-prefetch" href="https://calendly.com" />
+
       </head>
       <body>
         {children}
