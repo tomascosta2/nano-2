@@ -131,6 +131,7 @@ export default function ThankYou() {
             <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-6.webp" alt="Nano Ponce Fit - Cambio 3" />
           </div>
         </div>
+        <a className="py-3 bg-green-500 block text-center mx-auto md:w-fit mt-8 px-8 text-white font-bold" target="_blank" href="https://wa.me/+5491136857548">Confirmar mi asistencia</a>
       </div>
     </div>
   );

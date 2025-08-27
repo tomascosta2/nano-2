@@ -109,30 +109,6 @@ export default function Calendly() {
 					</div>
 				</div>
 			</section>
-			{/* <section className="pb-[60px]">
-				<div className="max-w-[1200px] mx-auto px-4">
-					<div className="grid md:grid-cols-3 gap-4">
-						{
-							TESTIMONIALS.map((item) => {
-								return (
-									<div className="border border-white/20 rounded-lg p-8">
-										<div className="flex gap-4 items-center">
-											<img src={item.img} className="size-[70px] bg-gray-300 rounded-full" />
-											<div>
-												<h3 className="text-white text-[20px] font-semibold">{item.nombre}</h3>
-												<p className="text-[14px] text-white/80 mt-2">{item.dato}</p>
-											</div>
-										</div>
-										<p className="mt-4">
-											"{item.texto}"
-										</p>
-									</div>
-								)
-							})
-						}
-					</div>
-				</div>
-			</section> */}
 
 			<section className="px-4">
 				<div className="max-w-[1200px] mx-auto px-4 border-t border-b border-[#fbff00] py-[40px]">
@@ -152,14 +128,6 @@ export default function Calendly() {
 			</section>
 
 			{/* VERY CREDIBLE SOCIAL PROOF */}
-			{/* 
-				* Mateo Falco -17 kg en 3 meses 
-				* ⁠Agustín Santoro -6 en 1 mes
-				* ⁠Cristian Ponce -4 kg en 1 mes
-				* ⁠Mauricio Cano -5 kg en 1 mes
-				* ⁠Siro González -5,5 kg en - mes
-				* Mateo Tombesi -8 kg en 2 meses
-			*/}
 			<section className="py-[40px] px-4">
 				<div className="max-w-[1200px] mx-auto">
 					<div className="grid md:grid-cols-3 gap-4 mt-8">
