@@ -25,6 +25,10 @@ export default function Calendly() {
 		},
 	]
 
+	const name = localStorage.getItem("name")
+	const email = localStorage.getItem("email")
+	const phone = localStorage.getItem("phone")
+
 	useEffect(() => {
 		const script = document.createElement("script");
 		script.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -44,8 +48,6 @@ export default function Calendly() {
 
 				const fbp = localStorage.getItem("_fbp");
 				const fbc = localStorage.getItem("_fbc");
-				const email = localStorage.getItem("email")
-				const phone = localStorage.getItem("phone")
 
 				if (isQualified === "true") {
 					// if (true) {
@@ -110,7 +112,7 @@ export default function Calendly() {
 						<div className="bg-white w-full min-h-[600px] rounded-lg overflow-clip">
 							<div
 								className="calendly-inline-widget"
-						data-url="https://calendly.com/marianoponce2002/45min?hide_gdpr_banner=1"
+								data-url={`https://calendly.com/marianoponce2002/45min?hide_gdpr_banner=1&name=${name}&email=${email}`}
 								style={{ minWidth: "320px", height: "800px" }}
 							></div>
 						</div>

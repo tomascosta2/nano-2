@@ -145,6 +145,7 @@ export default function CalificationFormDirect({variant}: Props) {
 				
 			}
 
+			localStorage.setItem('name', data.name);
 			localStorage.setItem('email', data.email);
 			localStorage.setItem('phone', `${data.codigoPais}${data.telefono}`);
 
