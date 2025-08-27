@@ -1,33 +1,12 @@
 'use client';
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Calendly() {
 
-	const TESTIMONIALS = [
-		{
-			img: '',
-			nombre: 'Nombre y Apellido',
-			dato: 'PUESTO || UBICACIÓN || EDAD',
-			texto: 'Testimonio acá. Lorem ipsum dolor latem '
-		},
-		{
-			img: '',
-			nombre: 'Nombre y Apellido',
-			dato: 'PUESTO || UBICACIÓN || EDAD',
-			texto: 'Testimonio acá. Lorem ipsum dolor latem '
-		},
-		{
-			img: '',
-			nombre: 'Nombre y Apellido',
-			dato: 'PUESTO || UBICACIÓN || EDAD',
-			texto: 'Testimonio acá. Lorem ipsum dolor latem '
-		},
-	]
-
-	const name = localStorage.getItem("name")
-	const email = localStorage.getItem("email")
-	const phone = localStorage.getItem("phone")
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [phone, setPhone] = useState('');
 
 	useEffect(() => {
 		const script = document.createElement("script");
@@ -37,6 +16,14 @@ export default function Calendly() {
 	}, []);
 
 	useEffect(() => {
+
+		const name = localStorage.getItem('name');
+		setName(name || '')
+		const email = localStorage.getItem('email');
+		setEmail(email || '')
+		const phone = localStorage.getItem('phone');
+		setPhone(phone || '')
+
 		const handleCalendlyEvent = (e: MessageEvent) => {
 
 			if (e.origin !== "https://calendly.com") return;
