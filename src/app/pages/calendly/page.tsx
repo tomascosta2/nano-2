@@ -20,6 +20,17 @@ export default function CalendlyFast() {
 			if (e.origin !== "https://calendly.com") return;
 
 			if (e.data?.event === "calendly.event_scheduled") {
+
+				// https://hook.us2.make.com/2a7gkby3xtgo4annvy16nbu74laekhem
+
+				fetch('https://hook.us2.make.com/jxwzmi4n62c3nfmie24ti5aoe4o8ukuk', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						email
+					}),
+				}).catch(err => console.error('Tracking error:', err));
+
 				const isQualified = localStorage.getItem("isQualified");
 				const fbp = localStorage.getItem("_fbp");
 				const fbc = localStorage.getItem("_fbc");
