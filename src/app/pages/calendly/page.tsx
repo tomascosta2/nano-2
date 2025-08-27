@@ -227,7 +227,7 @@ export default function Calendly() {
 					{/* CALENDLY 2 (USE A PERSON PHOTO AND NAME - NO LOGO) */}
 					<div
 						className="calendly-inline-widget"
-						data-url="https://calendly.com/marianoponce2002/45min?hide_gdpr_banner=1"
+						data-url={`https://calendly.com/marianoponce2002/45min?hide_gdpr_banner=1&name=${name}&email=${email}`}
 						style={{ minWidth: "100%", height: "800px" }}
 					></div>
 				</div>
