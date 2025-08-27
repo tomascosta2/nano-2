@@ -19,7 +19,7 @@ export default function ThankYou() {
           Necesito que confirmes la llamada para asegurar tu lugar.
           <br /><br />
           Hace clic en el botón de abajo y confirma tu asistencia.
-          <a className="py-3 bg-green-500 block text-center mx-auto md:w-fit mt-8 px-8 text-white font-bold" target="_blank" href="https://wa.me/+5491136857548">Confirmar mi asistencia</a>
+          <a className="py-3 bg-green-500 block text-center mx-auto md:w-fit mt-8 px-8 text-white font-bold" target="_blank" href="https://wa.me/5491136857548?text=Hola%20Nano%2C%20quiero%20confirmar%20mi%20consulta">Confirmar mi asistencia</a>
         </p>
         <h3 className="text-center text-black text-[28px] leading-[115%] font-bold capitalize mb-8 mt-12">Preguntas reales de alumnos reales</h3>
         <Accordion type="single" collapsible className="w-full text-black">
@@ -131,7 +131,7 @@ export default function ThankYou() {
             <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-6.webp" alt="Nano Ponce Fit - Cambio 3" />
           </div>
         </div>
-        <a className="py-3 bg-green-500 block text-center mx-auto md:w-fit mt-8 px-8 text-white font-bold" target="_blank" href="https://wa.me/+5491136857548">Confirmar mi asistencia</a>
+        <a className="py-3 bg-green-500 block text-center mx-auto md:w-fit mt-8 px-8 text-white font-bold" target="_blank" href="https://wa.me/5491136857548?text=Hola%20Nano%2C%20quiero%20confirmar%20mi%20consulta">Confirmar mi asistencia</a>
       </div>
     </div>
   );
