@@ -16,10 +16,10 @@ export default function ThankYou() {
           Solo falta un paso!
         </h1>
         <p className="text-[20px] text-black">
-          Te debería haber llegado un WhatsApp, necesito que lo respondas para confirmar la llamada y asegurar tu lugar.
+          Necesito que confirmes la llamada para asegurar tu lugar.
           <br /><br />
-          En caso de que no te haya llegado, hace clic en el botón de abajo y confirma tu asistencia.
-          <a className="py-3 bg-green-500 block text-center mx-auto md:w-fit mt-8 px-8 text-white font-bold" target="_blank" href="https://wa.me/+542616841853">Confirmar mi asistencia</a>
+          Hace clic en el botón de abajo y confirma tu asistencia.
+          <a className="py-3 bg-green-500 block text-center mx-auto md:w-fit mt-8 px-8 text-white font-bold" target="_blank" href="https://wa.me/+5491136857548">Confirmar mi asistencia</a>
         </p>
         <h3 className="text-center text-black text-[28px] leading-[115%] font-bold capitalize mb-8 mt-12">Preguntas reales de alumnos reales</h3>
         <Accordion type="single" collapsible className="w-full text-black">
