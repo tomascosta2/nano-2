@@ -16,8 +16,8 @@ const PREGUNTAS = {
 		label:
 			"¿Qué tipo solución estás buscando para transformar tu físico? *",
 		opciones: [
-			{ value: "presupuesto-bajo", label: "Quiero una solución económica para empezar por mi cuenta." },
-			{ value: "presupuesto-intermedio", label: "Quiero un plan serio, que justifique la inversión." },
+			{ value: "presupuesto-bajo", label: "Quiero una solución económica para empezar por mi cuenta. (En este caso NO agendes, para cambiar tu vida necesitas invertir)" },
+			{ value: "presupuesto-intermedio", label: "Quiero un plan serio, con un equipo de profesionales ayudandome 1 a 1 y que justifique la inversión." },
 			{ value: "presupuesto-alto", label: "Quiero la mejor opción disponible, independientemente del precio." },
 		],
 	},
