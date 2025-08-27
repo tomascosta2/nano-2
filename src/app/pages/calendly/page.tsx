@@ -23,7 +23,7 @@ export default function CalendlyFast() {
 
 				// https://hook.us2.make.com/2a7gkby3xtgo4annvy16nbu74laekhem
 
-				fetch('https://hook.us2.make.com/jxwzmi4n62c3nfmie24ti5aoe4o8ukuk', {
+				fetch('https://hook.us2.make.com/2a7gkby3xtgo4annvy16nbu74laekhem', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
 					body: JSON.stringify({
