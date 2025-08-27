@@ -43,12 +43,12 @@ export default function Home() {
           <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
             {variant === 'A' && (
               <span>
-                BAJA ENTRE <span className="text-[#ffcc00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON EL <span className="text-[#ffcc00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+                BAJA ENTRE <span className="text-[#fbff00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON EL <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
               </span>
             )}
             {variant === 'B' && (
               <span>
-                BAJA ENTRE <span className="text-[#ffcc00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON MI <span className="text-[#ffcc00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+                BAJA ENTRE <span className="text-[#fbff00]">5 Y 15 KG DE GRASA CORPORAL EN 90 DÍAS</span> CON MI <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
               </span>
             )}
           </h1>
