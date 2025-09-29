@@ -43,12 +43,12 @@ export default function Home() {
           <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
             {variant === 'A' && (
               <span>
-                BAJA ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICA EN 90 DÍAS</span> CON EL <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+                BAJÁ ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICÁ EN 90 DÍAS</span> CON EL <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
               </span>
             )}
             {variant === 'B' && (
               <span>
-                BAJA ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICA EN 90 DÍAS</span> CON MI <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+                BAJÁ ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICÁ EN 90 DÍAS</span> CON MI <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
               </span>
             )}
           </h1>
@@ -65,7 +65,12 @@ export default function Home() {
               <div
                 className="bg-[#fbff00] aspect-video rounded-br-[8px] md:rounded-br-[12px] rounded-bl-[8px] md:rounded-bl-[12px]"
               >
-                <iframe src="https://fast.wistia.net/embed/iframe/muihc6sd9j?web_component=true&seo=true" title="2025-09-23 11-03-45 Video" allow="autoplay; fullscreen" scrolling="no" className="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
+                {variant === 'A' && ( // Viejo
+                    <iframe src="https://fast.wistia.net/embed/iframe/muihc6sd9j?web_component=true&seo=true" title="2025-09-23 11-03-45 Video" allow="autoplay; fullscreen" scrolling="no" className="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
+                )}
+                {variant === 'B' && ( // Nuevo
+                    <iframe src="https://fast.wistia.net/embed/iframe/2grptuep8y?web_component=true&seo=true" title="2025-09-23 11-03-45 Video" allow="autoplay; fullscreen" scrolling="no" className="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
+                )}
                 <script src="https://fast.wistia.net/player.js" async></script>
               </div>
             </div>
