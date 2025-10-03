@@ -64,7 +64,7 @@ export default function CalendlyFast() {
 
 	// Construir la URL de Calendly sin widget.js
 	const calendlyUrl = useMemo(() => {
-		const base = "https://calendly.com/marianoponce2002/45min";
+		const base = "https://calendly.com/marianoponce2002";
 		const params = new URLSearchParams({
 			hide_gdpr_banner: "1",
 			embed_type: "InlineWidget",
