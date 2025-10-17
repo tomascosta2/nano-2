@@ -89,8 +89,8 @@ export default function Home() {
                   fill="#111111"></path>
               </svg>
             </button>
-            <p className="text-center mt-4 text-white/80 mx-auto max-w-[350px] text-[14px]">
-              PD: Te garantizamos resultados con <span className="underline">solo 3 horas por semana</span> o trabajamos gratis con vos hasta lograrlo.
+            <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
+              Cupos limitados - No te lo pierdas!
             </p>
           </div>
         </div>
@@ -152,8 +152,8 @@ export default function Home() {
                 fill="#111111"></path>
             </svg>
           </button>
-          <p className="text-center mt-4 text-white/80 mx-auto max-w-[350px] text-[14px]">
-            PD: Te garantizamos resultados con <span className="underline">solo 3 horas por semana</span> o trabajamos gratis con vos hasta lograrlo.
+          <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
+            Cupos limitados - No te lo pierdas!
           </p>
         </div>
       </section>
@@ -229,13 +229,14 @@ export default function Home() {
                 fill="#111111"></path>
             </svg>
           </button>
-          <p className="text-center mt-4 text-white/80 mx-auto max-w-[350px] text-[14px]">
-            PD: Te garantizamos resultados con <span className="underline">solo 3 horas por semana</span> o trabajamos gratis con vos hasta lograrlo.
-          </p>
+            <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
+              Cupos limitados - No te lo pierdas!
+            </p>
         </div>
-        <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[70%] rounded-full absolute left-[calc(50%-300px)] md:-left-[300px] -bottom-[300px] -z-50"></div>
-        <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[70%] rounded-full absolute right-[calc(50%-300px)] md:-right-[300px] -bottom-[300px] -z-50"></div>
+        <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute left-[calc(50%-300px)] md:-left-[300px] -bottom-[300px] -z-50"></div>
+        <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute right-[calc(50%-300px)] md:-right-[300px] -bottom-[300px] -z-50"></div>
       </section>
+      <p className="pb-6 pt-8 text-[14px] text-center px-4 text-white/60">© Nano Fitness 2025. Todos los derechos reservados.</p>
     </div>
   );
 }
