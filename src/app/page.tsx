@@ -29,10 +29,10 @@ export default function Home() {
           <CalificationFormDirect variant={variant} />
         )
       }
-      <header className="bg-[#fbff00]">
+      <header className="bg-[#fbff00] max-w-[85%] rounded-full mt-4 mx-auto">
         <div className="cf-container">
           <h3
-            className="text-center text-black text-[18px] py-3 font-bold leading-[115%]"
+            className="text-center text-black text-[14px] py-3 font-bold leading-[115%]"
           >
             SOLO PARA HOMBRES +30 OCUPADOS CON SU TRABAJO Y FAMILIA
           </h3>
@@ -69,7 +69,6 @@ export default function Home() {
                 <script src="https://fast.wistia.net/player.js" async></script>
               </div>
             </div>
-            <div className="bg-[#fbff00] size-[350px] md:size-[700px] top-0 md:-top-[100px] blur-[100px] opacity-[70%] rounded-full absolute left-[calc(50%-175px)] md:left-[calc(50%-350px)] -z-50"></div>
           </section>
           <div className="mt-8">
             <button
