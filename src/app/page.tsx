@@ -54,7 +54,7 @@ export default function Home() {
           </h1>
           <section className="relative">
             <div
-              className="border-4 overflow-clip rounded-[12px] md:rounded-[16px] border-[#fbff00] mt-8 max-w-[750px] mx-auto"
+              className="border-4 overflow-clip rounded-[12px] md:rounded-[16px] border-[#fbff00] mt-6 max-w-[750px] mx-auto"
             >
               <div className="p-2 text-center text-black font-bold bg-[#fbff00]">
                 CLIC PARA ACTIVAR EL SONIDO
