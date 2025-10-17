@@ -109,7 +109,7 @@ export default function Home() {
                 return (
                   <div className="p-2 rounded-[24px] relative overflow-clip">
                     <div className="bg-[#fbff00] size-[600px] md:size-[700px] top-0 md:-top-[100px] blur-[100px] opacity-[70%] rounded-full absolute left-[calc(50%-300px)] md:left-[calc(50%-350px)] -z-50"></div>
-                    <div className="relative bg-[#111] z-50 p-8 md:p-[50px] rounded-[20px] flex md:flex-row flex-col gap-4 md:gap-8">
+                    <div className="relative bg-[#1a1a00] z-50 p-8 md:p-[50px] rounded-[20px] flex md:flex-row flex-col gap-4 md:gap-8">
                       <div className="w-full md:min-w-[360px] aspect-video rounded-[10px] overflow-hidden">
                         <iframe
                           className="w-full h-full"
