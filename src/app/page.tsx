@@ -43,7 +43,7 @@ export default function Home() {
           <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
             {variant === 'A' && (
               <span>
-                BAJÁ ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICÁ EN 90 DÍAS</span> CON EL <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+                IMAGINATE BAJAR ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICAR EN 90 DÍAS</span> CON EL MÉTODO FIT90 - <span className="text-[#fbff00]">SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES</span>
               </span>
             )}
             {variant === 'B' && (
