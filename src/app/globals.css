@@ -8,7 +8,7 @@ body {
 
 :root {
 	--primary: #fbff00;
-	--background: #111;
+	--background: #1b1b00;
 }
 
 /* Scroll */
@@ -22,7 +22,7 @@ body {
 
 *::-webkit-scrollbar-track,
 body {
-	background-color: var(--background);
+	background-color: var(--background) !important;
 	overflow-x: clip;
 }
 
