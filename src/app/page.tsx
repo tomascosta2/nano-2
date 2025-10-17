@@ -65,12 +65,7 @@ export default function Home() {
               <div
                 className="bg-[#fbff00] aspect-video rounded-br-[8px] md:rounded-br-[12px] rounded-bl-[8px] md:rounded-bl-[12px]"
               >
-                {variant === 'A' && ( // Viejo
-                    <iframe src="https://fast.wistia.net/embed/iframe/muihc6sd9j?web_component=true&seo=true" title="2025-09-23 11-03-45 Video" allow="autoplay; fullscreen" scrolling="no" className="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
-                )}
-                {variant === 'B' && ( // Nuevo
-                    <iframe src="https://fast.wistia.net/embed/iframe/2grptuep8y?web_component=true&seo=true" title="2025-09-23 11-03-45 Video" allow="autoplay; fullscreen" scrolling="no" className="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
-                )}
+                <iframe src="https://fast.wistia.net/embed/iframe/2grptuep8y?web_component=true&seo=true" title="2025-09-23 11-03-45 Video" allow="autoplay; fullscreen" scrolling="no" className="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
                 <script src="https://fast.wistia.net/player.js" async></script>
               </div>
             </div>
