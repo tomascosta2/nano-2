@@ -52,9 +52,6 @@ export default function Home() {
               </span>
             )}
           </h1>
-          <p className="mt-4 text-center max-w-[700px] mx-auto">
-            Mirá el video completo, y aplicalo por tu cuenta o agenda una llamada para asegurar tu transformación.
-          </p>
           <section className="relative">
             <div
               className="border-4 overflow-clip rounded-[12px] md:rounded-[16px] border-[#fbff00] mt-8 max-w-[750px] mx-auto"
@@ -70,6 +67,9 @@ export default function Home() {
               </div>
             </div>
           </section>
+          <p className="mt-4 text-center max-w-[700px] mx-auto">
+            Mirá el video completo, y aplicalo por tu cuenta o agenda una llamada para asegurar tu transformación.
+          </p>
           <div className="mt-8">
             <button
               className="cf-btn"
