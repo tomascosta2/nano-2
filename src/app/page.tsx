@@ -40,7 +40,7 @@ export default function Home() {
       </header>
       <section className="mt-6 md:mt-8 pb-[60px] md:pb-[80px]">
         <div className="cf-container">
-          <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
+          <h1 className="text-center text-[22px] md:text-[32px] font-bold leading-[120%]">
             {variant === 'A' && (
               <span>
                 IMAGINATE BAJAR ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICAR EN 90 DÍAS</span> CON EL MÉTODO FIT90 - <span className="text-[#fbff00]">SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES</span>
