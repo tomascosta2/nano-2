@@ -29,7 +29,7 @@ export default function Home() {
           <CalificationFormDirect variant={variant} />
         )
       }
-      <header className="bg-[#fbff00] max-w-[85%] rounded-full mt-8 md:mt-12 mx-auto">
+      <header className="bg-[#fbff00] max-w-[85%] w-[400px] rounded-full mt-8 md:mt-12 mx-auto">
         <div className="cf-container">
           <h3
             className="text-center text-black text-[14px] py-3 font-bold leading-[115%]"
