@@ -29,7 +29,7 @@ export default function Home() {
           <CalificationFormDirect variant={variant} />
         )
       }
-      <header className="bg-[#fbff00] max-w-[85%] rounded-full mt-4 mx-auto">
+      <header className="bg-[#fbff00] max-w-[85%] rounded-full mt-4 md:mt-12 mx-auto">
         <div className="cf-container">
           <h3
             className="text-center text-black text-[14px] py-3 font-bold leading-[115%]"
@@ -38,7 +38,7 @@ export default function Home() {
           </h3>
         </div>
       </header>
-      <section className="pt-8 md:pt-14 pb-[60px] md:pb-[80px]">
+      <section className="pt-4 md:pt-8 pb-[60px] md:pb-[80px]">
         <div className="cf-container">
           <h1 className="text-center text-[24px] md:text-[32px] font-bold leading-[120%]">
             {variant === 'A' && (
