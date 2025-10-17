@@ -70,7 +70,7 @@ export default function Home() {
           <p className="mt-4 text-center text-[14px] md:text-[16px] max-w-[700px] mx-auto">
             Mirá el video completo, y aplicalo por tu cuenta o agenda una llamada para asegurar tu transformación.
           </p>
-          <div className="mt-8">
+          <div className="mt-6">
             <button
               className="cf-btn"
               onClick={() => { setIsFormOpened(true) }}
