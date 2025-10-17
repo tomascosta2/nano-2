@@ -32,9 +32,9 @@ export default function Home() {
       <header className="bg-[#fbff00] max-w-[85%] w-[400px] rounded-full mt-8 md:mt-12 mx-auto">
         <div className="cf-container">
           <h3
-            className="text-center text-black text-[14px] py-3 font-bold leading-[115%]"
+            className="text-center text-black text-[12px] py-3 font-bold leading-[115%]"
           >
-            SOLO PARA HOMBRES +30 OCUPADOS CON SU TRABAJO Y FAMILIA
+            Te exigis, te castigas, lo das todo… y aún así ¿no te reconoces frente al espejo?
           </h3>
         </div>
       </header>
