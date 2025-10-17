@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 body {
-	background-color: #1b1b00;
+	background-color: #131300;
 	color: white;
 	font-family: 'Inter Variable', sans-serif;
 }
 
 :root {
 	--primary: #fbff00;
-	--background: #1b1b00;
+	--background: #131300;
 }
 
 /* Scroll */
