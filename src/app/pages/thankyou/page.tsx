@@ -17,7 +17,7 @@ export default function ThankYou() {
           <br /><br />
           Solo falta un paso!
         </h1>
-        <p className="text-[20px] text-black">
+        <p className="text-[18px] text-black">
           Necesito que confirmes la llamada para asegurar tu lugar.
           <br /><br />
           Por favor, asegurate de poder asistir a la reunión y estar en un espacio cómodo para dedicarle la atención que merece!
