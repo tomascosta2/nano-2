@@ -5,7 +5,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 export default function ThankYou() {
   return (
     <div className="bg-white">
-      <div className="max-w-[700px] mx-auto px-4 py-[60px] bg-white">
+      <div className="max-w-[700px] mx-auto px-4 py-[40px] bg-white">
         <p className="mb-4 bg-amber-200 flex justify-center p-1 rounded-md text-[18px] text-center text-black">
           <svg className="fill-amber-500 size-[25px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M320 64C334.7 64 348.2 72.1 355.2 85L571.2 485C577.9 497.4 577.6 512.4 570.4 524.5C563.2 536.6 550.1 544 536 544L104 544C89.9 544 76.9 536.6 69.6 524.5C62.3 512.4 62.1 497.4 68.8 485L284.8 85C291.8 72.1 305.3 64 320 64zM320 232C306.7 232 296 242.7 296 256L296 368C296 381.3 306.7 392 320 392C333.3 392 344 381.3 344 368L344 256C344 242.7 333.3 232 320 232zM346.7 448C347.3 438.1 342.4 428.7 333.9 423.5C325.4 418.4 314.7 418.4 306.2 423.5C297.7 428.7 292.8 438.1 293.4 448C292.8 457.9 297.7 467.3 306.2 472.5C314.7 477.6 325.4 477.6 333.9 472.5C342.4 467.3 347.3 457.9 346.7 448z" /></svg>
           <span><strong>¡Importante!</strong> Mira el video y lee el texto</span>
@@ -19,6 +19,10 @@ export default function ThankYou() {
         </h1>
         <p className="text-[20px] text-black">
           Necesito que confirmes la llamada para asegurar tu lugar.
+          <br /><br />
+          Por favor, asegurate de poder asistir a la reunión y estar en un espacio cómodo para dedicarle la atención que merece!
+          <br /><br />
+          (En caso de no poder asistir, avisar con anticipación para no quitarle lugar a otra persona).
           <br /><br />
           Hace clic en el botón de abajo y confirma tu asistencia.
           <a className="py-3 bg-green-500 block text-center mx-auto md:w-fit mt-8 px-8 text-white font-bold" target="_blank" href="https://wa.me/5491136857548?text=Hola%20Nano%2C%20quiero%20confirmar%20mi%20consulta">Confirmar mi asistencia</a>
