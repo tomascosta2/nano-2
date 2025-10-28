@@ -203,6 +203,37 @@ export default function ThankYou() {
           Confirmar mi asistencia por WhatsApp
         </a>
 
+        {/* FAQ (desplazada hacia abajo) */}
+        <h3 className="text-center text-black text-[24px] leading-[115%] font-bold mb-6 mt-10">
+          Preguntas frecuentes
+        </h3>
+        <Accordion type="single" collapsible className="w-full text-black">
+          <AccordionItem value="q1">
+            <AccordionTrigger className="text-[18px] font-bold leading-[120%]">
+              ¿Cuánto tiempo necesito para ver cambios?
+            </AccordionTrigger>
+            <AccordionContent className="text-[16px]">
+              El 90% ve el cambio más notorio en las primeras dos semanas; depende del punto de partida. Medimos con fotos, medidas y fuerza.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="q2">
+            <AccordionTrigger className="text-[18px] font-bold leading-[120%]">
+              ¿Tengo que dejar de comer lo que me gusta?
+            </AccordionTrigger>
+            <AccordionContent className="text-[16px]">
+              No. Te enseñamos a incluir tus comidas favoritas sin sabotear tu progreso.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="q3">
+            <AccordionTrigger className="text-[18px] font-bold leading-[120%]">
+              No tengo tiempo todos los días, ¿igual puedo?
+            </AccordionTrigger>
+            <AccordionContent className="text-[16px]">
+              Sí. Planes efectivos de 3 sesiones siples/semana, 100% adaptados a tu agenda.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+
         {/* Add to Calendar + vCard + Reprogramar */}
         <div className="mt-6 grid sm:grid-cols-2 gap-3">
           {/* <div className="rounded-xl border p-4">
@@ -237,37 +268,6 @@ export default function ThankYou() {
             </div>
           ))}
         </div>
-
-        {/* FAQ (desplazada hacia abajo) */}
-        <h3 className="text-center text-black text-[24px] leading-[115%] font-bold mb-6 mt-10">
-          Preguntas frecuentes
-        </h3>
-        <Accordion type="single" collapsible className="w-full text-black">
-          <AccordionItem value="q1">
-            <AccordionTrigger className="text-[18px] font-bold leading-[120%]">
-              ¿Cuánto tiempo necesito para ver cambios?
-            </AccordionTrigger>
-            <AccordionContent className="text-[16px]">
-              Muchos ven cambios en 3–4 semanas; depende del punto de partida. Medimos con fotos, medidas y fuerza.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="q2">
-            <AccordionTrigger className="text-[18px] font-bold leading-[120%]">
-              ¿Tengo que dejar de comer lo que me gusta?
-            </AccordionTrigger>
-            <AccordionContent className="text-[16px]">
-              No. Te enseñamos a incluir tus comidas favoritas sin sabotear tu progreso.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="q3">
-            <AccordionTrigger className="text-[18px] font-bold leading-[120%]">
-              No tengo tiempo todos los días, ¿igual puedo?
-            </AccordionTrigger>
-            <AccordionContent className="text-[16px]">
-              Sí. Planes efectivos desde 2–3 sesiones/semana, adaptados a tu agenda.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
 
         {/* CTA repetido al final */}
         <a
