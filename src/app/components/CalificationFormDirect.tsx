@@ -3,11 +3,44 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-type Props = {
-  variant: string;
+type Props = { variant: string };
+type Opcion = { value: string; label: string };
+
+type FormValues = {
+  name: string;
+  email: string;
+  codigoPais: string;
+  telefono: string;
+  edad: string;
+  presupuesto: string;
+  cuerpo: string;
+  urgencia: string;
+  ocupacion: string;
+  compromiso90: string;
+  ad: string;
 };
 
-type Opcion = { value: string; label: string };
+// IDs válidos de preguntas de opción única
+type SingleId = Extract<
+  keyof FormValues,
+  'edad' | 'presupuesto' | 'cuerpo' | 'urgencia' | 'ocupacion' | 'compromiso90'
+>;
+
+type ContactStep = {
+  type: 'contact';
+  id: 'contact';
+  title: string;
+  subtitle?: string;
+};
+
+type SingleStep = {
+  type: 'single';
+  id: SingleId;
+  title: string;
+  subtitle?: string;
+  options: Opcion[];
+  required?: boolean;
+};
 
 const PAISES = [
   { code: '+54', name: 'Argentina', flag: '🇦🇷' },
@@ -40,9 +73,8 @@ export default function CalificationFormDirect({ variant }: Props) {
     handleSubmit,
     setValue,
     watch,
-    reset,
     formState: { errors },
-  } = useForm({
+  } = useForm<FormValues>({
     defaultValues: {
       name: '',
       email: '',
@@ -61,33 +93,7 @@ export default function CalificationFormDirect({ variant }: Props) {
   const [loading, setLoading] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // --------- PREGUNTAS (tipo Typeform) ----------
-  // Paso 0: datos de contacto (Nombre / Email / Teléfono)
-  // Paso 1..N: preguntas de opción única como en las capturas
-  const steps = useMemo<
-    Array<
-      | {
-          type: 'contact';
-          id: 'contact';
-          title: string;
-          subtitle?: string;
-        }
-      | {
-          type: 'single';
-          id:
-            | 'edad'
-            | 'presupuesto'
-            | 'cuerpo'
-            | 'urgencia'
-            | 'ocupacion'
-            | 'compromiso90';
-          title: string;
-          subtitle?: string;
-          options: Opcion[];
-          required?: boolean;
-        }
-    >
-  >(
+  const steps = useMemo<(ContactStep | SingleStep)[]>(
     () => [
       {
         type: 'contact',
@@ -120,7 +126,6 @@ export default function CalificationFormDirect({ variant }: Props) {
           },
           { value: 'otro', label: 'Otro' },
         ],
-        required: true,
       },
       {
         type: 'single',
@@ -129,14 +134,8 @@ export default function CalificationFormDirect({ variant }: Props) {
         subtitle:
           'Responde con total sinceridad. Esto nos ayuda a ver cómo ayudarte.',
         options: [
-          {
-            value: '3',
-            label: '(3 de 10) Estoy buscando info. No es prioridad ahora.',
-          },
-          {
-            value: '5',
-            label: '(5 de 10) Quiero empezar pronto. Me estoy motivando.',
-          },
+          { value: '3', label: '(3 de 10) Estoy buscando info. No es prioridad ahora.' },
+          { value: '5', label: '(5 de 10) Quiero empezar pronto. Me estoy motivando.' },
           {
             value: '7',
             label:
@@ -148,7 +147,6 @@ export default function CalificationFormDirect({ variant }: Props) {
               '(10 de 10) No puedo esperar más. Esto me afecta física y mentalmente. Haré lo que haga falta.',
           },
         ],
-        required: true,
       },
       {
         type: 'single',
@@ -163,20 +161,15 @@ export default function CalificationFormDirect({ variant }: Props) {
           { value: 'estudiante', label: 'Estudiante' },
           { value: 'trabajador-estudiante', label: 'Trabajador y Estudiante' },
         ],
-        required: true,
       },
       {
         type: 'single',
         id: 'compromiso90',
         title: '¿Estás listo/a para comprometerte 90 días con tu cambio?*',
         options: [
-          {
-            value: 'si',
-            label: 'Sí, sé que los cambios duraderos no se logran en 2 semanas.',
-          },
+          { value: 'si', label: 'Sí, sé que los cambios duraderos no se logran en 2 semanas.' },
           { value: 'no', label: 'No, ahora no puedo comprometerme a 90 días.' },
         ],
-        required: true,
       },
       {
         type: 'single',
@@ -188,13 +181,11 @@ export default function CalificationFormDirect({ variant }: Props) {
           { value: 'adulto', label: '24 - 44 años' },
           { value: 'mayor', label: '+44 años' },
         ],
-        required: true,
       },
       {
         type: 'single',
         id: 'presupuesto',
-        title:
-          '¿Qué tipo de solución estás buscando para transformar tu físico?*',
+        title: '¿Qué tipo de solución estás buscando para transformar tu físico?*',
         options: [
           {
             value: 'presupuesto-bajo',
@@ -212,135 +203,106 @@ export default function CalificationFormDirect({ variant }: Props) {
               'Quiero la mejor opción disponible, independientemente del precio.',
           },
         ],
-        required: true,
       },
     ],
     []
   );
 
-  // paso actual
   const [stepIndex, setStepIndex] = useState(0);
   const totalSteps = steps.length;
   const isLast = stepIndex === totalSteps - 1;
 
-  // Para UX tipo Typeform: foco y scroll suave al cambiar paso
   useEffect(() => {
     containerRef.current?.querySelector<HTMLElement>('[data-autofocus]')?.focus();
     containerRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
   }, [stepIndex]);
 
-  // Leer ?ad= de la URL y precargar
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
     const adParam = searchParams.get('ad');
     if (adParam) setValue('ad', adParam);
   }, [setValue]);
 
-  // Evitar scroll de fondo (modal fullscreen)
   useEffect(() => {
     const b = document.querySelector('body');
     b?.classList.add('overflow-hidden');
     return () => b?.classList.remove('overflow-hidden');
   }, []);
 
-  // Atajos de teclado: A-E / 1-5 para seleccionar opción y avanzar
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      const step = steps[stepIndex];
-      if (!step || step.type !== 'single') return;
-
-      const selectByIndex = (idx: number) => {
-        const opt = step.options[idx];
-        if (!opt) return;
-        setValue(step.id, opt.value, { shouldValidate: true });
-        next();
-      };
-
-      const key = e.key.toLowerCase();
-      if (['1', '2', '3', '4', '5', '6'].includes(key)) {
-        selectByIndex(Number(key) - 1);
-      }
-      if (['a', 'b', 'c', 'd', 'e', 'f'].includes(key)) {
-        selectByIndex(key.charCodeAt(0) - 'a'.charCodeAt(0));
-      }
-      if (key === 'enter') {
-        if (stepIndex === 0) {
-          // en contacto, avanzar si válidos
-          if (isContactValid()) next();
-        } else if (!isLast) {
-          next();
-        }
-      }
-      if (key === 'Escape') back();
-      if (e.key === 'ArrowLeft') back();
-      if (e.key === 'ArrowRight') {
-        if (stepIndex === 0 ? isContactValid() : true) next();
-      }
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [stepIndex, steps]);
-
-  // Watchers para validar contacto (como en tu versión original)
-  const name = watch('name');
-  const email = watch('email');
-  const telefono = watch('telefono');
-  const codigoPais = watch('codigoPais');
+  // ------- Helpers
+  const values = watch(); // <- ahora es FormValues, no any
 
   const isContactValid = () => {
-    const isNameValid = (name ?? '').trim().length > 1;
-    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email ?? '');
-    const isPhoneValid = (telefono ?? '').trim().length > 5 && !!codigoPais;
+    const isNameValid = values.name.trim().length > 1;
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email);
+    const isPhoneValid = values.telefono.trim().length > 5 && !!values.codigoPais;
     return isNameValid && isEmailValid && isPhoneValid;
   };
 
   const back = () => setStepIndex((i) => Math.max(0, i - 1));
   const next = () => setStepIndex((i) => Math.min(totalSteps - 1, i + 1));
 
-  // --------- SUBMIT ----------
-  const onSubmit = async (data: any) => {
+  // Atajos teclado
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const step = steps[stepIndex];
+      if (step.type !== 'single') return;
+
+      const selectByIndex = (idx: number) => {
+        const opt = step.options[idx];
+        if (!opt) return;
+        setValue(step.id, opt.value as FormValues[SingleId], { shouldValidate: true });
+        next();
+      };
+
+      const key = e.key.toLowerCase();
+      if (['1', '2', '3', '4', '5', '6'].includes(key)) selectByIndex(Number(key) - 1);
+      if (['a', 'b', 'c', 'd', 'e', 'f'].includes(key))
+        selectByIndex(key.charCodeAt(0) - 'a'.charCodeAt(0));
+      if (key === 'enter') {
+        if (stepIndex === 0 ? isContactValid() : true) next();
+      }
+      if (key === 'escape' || e.key === 'ArrowLeft') back();
+      if (e.key === 'ArrowRight') next();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [stepIndex, steps, setValue]);
+
+  // ------- Submit
+  const onSubmit = async (data: FormValues) => {
     try {
       setLoading(true);
 
-      const payload = { ...data, variant };
       await fetch('https://hook.us2.make.com/4440nxy5471reiw1q18qotjc15rveijb', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify([payload]),
+        body: JSON.stringify([{ ...data, variant }]),
       });
 
       const isQualified =
-        (data.presupuesto === 'presupuesto-intermedio' ||
-          data.presupuesto === 'presupuesto-alto') &&
+        (data.presupuesto === 'presupuesto-intermedio' || data.presupuesto === 'presupuesto-alto') &&
         (data.edad === 'adulto' || data.edad === 'mayor');
 
-      // guardar flags y datos
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('isQualified', isQualified ? 'true' : 'false');
-        localStorage.setItem('name', data.name);
-        localStorage.setItem('email', data.email);
-        localStorage.setItem('phone', `${data.codigoPais}${data.telefono}`);
-      }
+      localStorage.setItem('isQualified', isQualified ? 'true' : 'false');
+      localStorage.setItem('name', data.name);
+      localStorage.setItem('email', data.email);
+      localStorage.setItem('phone', `${data.codigoPais}${data.telefono}`);
 
       const fbp =
-        document.cookie
-          .split('; ')
-          .find((row) => row.startsWith('_fbp='))
-          ?.split('=')[1] || null;
+        document.cookie.split('; ').find((row) => row.startsWith('_fbp='))?.split('=')[1] ||
+        null;
 
-      function getCookieValue(cookieName: string) {
+      const getCookieValue = (cookieName: string) => {
         const name = cookieName + '=';
         const decodedCookie = decodeURIComponent(document.cookie);
         const ca = decodedCookie.split(';');
         for (let i = 0; i < ca.length; i++) {
           let c = ca[i].trim();
-          if (c.indexOf(name) === 0) {
-            return c.substring(name.length, c.length);
-          }
+          if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
         }
         return '';
-      }
+      };
       const fbc = getCookieValue('_fbc');
 
       if (isQualified) {
@@ -359,21 +321,18 @@ export default function CalificationFormDirect({ variant }: Props) {
 
       window.location.href = '/pages/calendly';
     } catch (e) {
-      console.error('Error:', e);
+      console.error(e);
       setLoading(false);
     }
   };
 
-  // UI helpers
+  // ---- UI
   const Progress = () => {
     const percent = Math.round(((stepIndex + 1) / totalSteps) * 100);
     return (
       <div className="w-full mb-6">
         <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-          <div
-            className="h-2 bg-[#fbff00] transition-all"
-            style={{ width: `${percent}%` }}
-          />
+          <div className="h-2 bg-[#fbff00] transition-all" style={{ width: `${percent}%` }} />
         </div>
         <p className="text-white/70 text-xs mt-2">{percent}% completado</p>
       </div>
@@ -398,7 +357,7 @@ export default function CalificationFormDirect({ variant }: Props) {
         ${selected ? 'ring-2 ring-[#fbff00] border-[#fbff00]/60' : ''}`}
     >
       <div className="flex items-center gap-3">
-        <span className="inline-flex items-center justify-center w-8 h-8 rounded-md bg-[#fbff00] text-black font-bold">
+        <span className="inline-flex items-center justify-center min-w-8 h-8 rounded-md bg-[#fbff00] text-black font-bold">
           {LETTERS[index]}
         </span>
         <span className="text-white/90 leading-snug">{text}</span>
@@ -406,35 +365,25 @@ export default function CalificationFormDirect({ variant }: Props) {
     </button>
   );
 
-  // valores actuales para marcar selección
-  const values = watch();
+  const step = steps[stepIndex];
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center px-4">
       <div
         ref={containerRef}
         className="w-full md:max-w-[720px] max-h-[calc(100vh-80px)] overflow-y-auto rounded-[20px] border border-white/10 bg-[#111] p-6 md:p-10 shadow-2xl"
       >
         {/* <Progress /> */}
 
-        {/* TITULOS */}
         <h2 className="text-[22px] md:text-[26px] font-semibold text-white leading-tight">
-          {steps[stepIndex].title}
+          {step.title}
         </h2>
-        {('subtitle' in steps[stepIndex] && steps[stepIndex].subtitle) ? (
-          <p className="text-white/70 mt-2">
-            {(steps[stepIndex] as any).subtitle}
-          </p>
-        ) : null}
+        {'subtitle' in step && step.subtitle && (
+          <p className="text-white/70 mt-2">{step.subtitle}</p>
+        )}
 
-        {/* CONTENIDO */}
-        <form
-          className="mt-6"
-          onSubmit={handleSubmit(onSubmit)}
-          autoComplete="on"
-        >
-          {/* Paso 0: Contacto */}
-          {steps[stepIndex].type === 'contact' && (
+        <form className="mt-6" onSubmit={handleSubmit(onSubmit)} autoComplete="on">
+          {step.type === 'contact' && (
             <div className="space-y-5">
               <label className="block">
                 <span className="text-white text-sm">Nombre</span>
@@ -445,11 +394,7 @@ export default function CalificationFormDirect({ variant }: Props) {
                   {...register('name', { required: 'Campo requerido' })}
                   className="mt-2 w-full rounded-lg bg-white text-[#111] px-4 py-3 outline-none"
                 />
-                {errors.name && (
-                  <span className="text-red-400 text-xs">
-                    {(errors as any).name.message}
-                  </span>
-                )}
+                {errors.name && <span className="text-red-400 text-xs">{errors.name.message}</span>}
               </label>
 
               <label className="block">
@@ -461,9 +406,7 @@ export default function CalificationFormDirect({ variant }: Props) {
                   className="mt-2 w-full rounded-lg bg-white text-[#111] px-4 py-3 outline-none"
                 />
                 {errors.email && (
-                  <span className="text-red-400 text-xs">
-                    {(errors as any).email.message}
-                  </span>
+                  <span className="text-red-400 text-xs">{errors.email.message}</span>
                 )}
               </label>
 
@@ -489,58 +432,44 @@ export default function CalificationFormDirect({ variant }: Props) {
                     placeholder="Número"
                     {...register('telefono', {
                       required: 'Campo requerido',
-                      pattern: {
-                        value: /^[0-9\s\-]+$/,
-                        message: 'Formato de teléfono inválido',
-                      },
+                      pattern: { value: /^[0-9\s\-]+$/, message: 'Formato de teléfono inválido' },
                     })}
-                    className="flex-1 rounded-lg bg-white text-[#111] px-4 py-3 outline-none"
+                    className="flex-1 bg-white text-[#111]/80 rounded-lg px-4 py-2 outline-none min-w-0"
                   />
                 </div>
                 {(errors as any).codigoPais && (
-                  <span className="text-red-400 text-xs">
-                    {(errors as any).codigoPais.message}
-                  </span>
+                  <span className="text-red-400 text-xs">{(errors as any).codigoPais.message}</span>
                 )}
-                {(errors as any).telefono && (
-                  <span className="text-red-400 text-xs">
-                    {(errors as any).telefono.message}
-                  </span>
+                {errors.telefono && (
+                  <span className="text-red-400 text-xs">{errors.telefono.message}</span>
                 )}
               </div>
             </div>
           )}
 
-          {/* Pasos de opción única */}
-          {steps[stepIndex].type === 'single' && (
+          {step.type === 'single' && (
             <div className="mt-2">
-              {(steps[stepIndex] as any).options.map(
-                (op: Opcion, idx: number) => (
-                  <CardOption
-                    key={op.value}
-                    index={idx}
-                    text={op.label}
-                    selected={values[(steps[stepIndex] as any).id] === op.value}
-                    onClick={() => {
-                      const id = (steps[stepIndex] as any).id;
-                      setValue(id, op.value, { shouldValidate: true });
-                      // avanzar automáticamente al elegir opción
-                      setTimeout(() => next(), 120);
-                    }}
-                  />
-                )
-              )}
+              {step.options.map((op, idx) => (
+                <CardOption
+                  key={op.value}
+                  index={idx}
+                  text={op.label}
+                  selected={values[step.id] === op.value}
+                  onClick={() => {
+                    setValue(step.id, op.value as FormValues[SingleId], { shouldValidate: true });
+                    setTimeout(() => setStepIndex((i) => Math.min(totalSteps - 1, i + 1)), 120);
+                  }}
+                />
+              ))}
             </div>
           )}
 
-          {/* Campo oculto ad */}
           <input type="hidden" {...register('ad')} />
 
-          {/* FOOTER: navegación */}
           <div className="mt-6 flex items-center justify-between gap-3">
             <button
               type="button"
-              onClick={back}
+              onClick={() => setStepIndex((i) => Math.max(0, i - 1))}
               className="px-4 py-3 rounded-lg border border-white/15 text-white/90 hover:bg-white/10 transition"
               disabled={stepIndex === 0 || loading}
             >
@@ -548,28 +477,21 @@ export default function CalificationFormDirect({ variant }: Props) {
             </button>
 
             {isLast ? (
-              <button
-                type="submit"
-                className="cf-btn"
-                disabled={loading}
-              >
+              <button type="submit" className="cf-btn" disabled={loading}>
                 {loading ? 'Cargando...' : 'Aceptar y Agendar'}
               </button>
             ) : (
               <button
                 type="button"
                 onClick={() => {
-                  if (steps[stepIndex].type === 'contact') {
-                    if (isContactValid()) next();
+                  if (step.type === 'contact') {
+                    if (isContactValid()) setStepIndex((i) => i + 1);
                   } else {
-                    next();
+                    setStepIndex((i) => i + 1);
                   }
                 }}
                 className="cf-btn"
-                disabled={
-                  loading ||
-                  (steps[stepIndex].type === 'contact' && !isContactValid())
-                }
+                disabled={loading || (step.type === 'contact' && !isContactValid())}
               >
                 Continuar
                 {!loading && (
@@ -591,11 +513,9 @@ export default function CalificationFormDirect({ variant }: Props) {
             )}
           </div>
 
-          {/* Nota tipo disclaimer */}
           <p className="text-white/70 text-xs mt-4">
-            PD: El método FIT90 está diseñado para hombres ocupados; no es la
-            típica rutina de influencer que solo puede cumplir un adolescente
-            que vive con los padres.
+            PD: El método FIT90 está diseñado para hombres ocupados; no es la típica rutina de
+            influencer que solo puede cumplir un adolescente que vive con los padres.
           </p>
         </form>
       </div>
@@ -603,11 +523,6 @@ export default function CalificationFormDirect({ variant }: Props) {
   );
 }
 
-/* ---- Estilos utilitarios (Tailwind) ----
-   Si ya tenés .cf-btn en tu proyecto, se usa la misma clase.
-   Si no, podés agregar algo así en tu CSS global con @apply:
-
-   .cf-btn {
-     @apply inline-flex items-center justify-center gap-2 rounded-lg bg-[#fbff00] text-black font-semibold px-5 py-3 hover:brightness-95 transition disabled:opacity-60 disabled:cursor-not-allowed;
-   }
+/* Si no tenés .cf-btn:
+.cf-btn { @apply inline-flex items-center justify-center gap-2 rounded-lg bg-[#fbff00] text-black font-semibold px-5 py-3 hover:brightness-95 transition disabled:opacity-60 disabled:cursor-not-allowed; }
 */
