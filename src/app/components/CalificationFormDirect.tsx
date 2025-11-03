@@ -106,6 +106,7 @@ export default function CalificationFormDirect({ variant }: Props) {
       {
         type: 'single',
         id: 'cuerpo',
+        required: true,
         title: '¿Cómo describirías tu cuerpo hoy?*',
         subtitle:
           'No te preocupes, nadie va a juzgarte. Solo queremos entender por dónde empezar.',
@@ -130,6 +131,7 @@ export default function CalificationFormDirect({ variant }: Props) {
       {
         type: 'single',
         id: 'urgencia',
+        required: true,
         title: '¿Qué tan urgente es para ti cambiar tu cuerpo ahora mismo?*',
         subtitle:
           'Responde con total sinceridad. Esto nos ayuda a ver cómo ayudarte.',
@@ -151,6 +153,7 @@ export default function CalificationFormDirect({ variant }: Props) {
       {
         type: 'single',
         id: 'ocupacion',
+        required: true,
         title: '¿A qué te dedicas?*',
         subtitle:
           'Esto nos ayuda a adaptar tu alimentación y entrenamiento a tu estilo de vida.',
@@ -165,6 +168,7 @@ export default function CalificationFormDirect({ variant }: Props) {
       {
         type: 'single',
         id: 'compromiso90',
+        required: true,
         title: '¿Estás listo/a para comprometerte 90 días con tu cambio?*',
         options: [
           { value: 'si', label: 'Sí, sé que los cambios duraderos no se logran en 2 semanas.' },
@@ -174,6 +178,7 @@ export default function CalificationFormDirect({ variant }: Props) {
       {
         type: 'single',
         id: 'edad',
+        required: true,
         title: '¿En qué rango de edad te encontrás?*',
         options: [
           { value: 'menor', label: 'Soy menor de edad' },
@@ -185,6 +190,7 @@ export default function CalificationFormDirect({ variant }: Props) {
       {
         type: 'single',
         id: 'presupuesto',
+        required: true,
         title: '¿Qué tipo de solución estás buscando para transformar tu físico?*',
         options: [
           {
@@ -217,21 +223,9 @@ export default function CalificationFormDirect({ variant }: Props) {
     containerRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
   }, [stepIndex]);
 
-  useEffect(() => {
-    const searchParams = new URLSearchParams(window.location.search);
-    const adParam = searchParams.get('ad');
-    if (adParam) setValue('ad', adParam);
-  }, [setValue]);
+  const values = watch();
 
-  useEffect(() => {
-    const b = document.querySelector('body');
-    b?.classList.add('overflow-hidden');
-    return () => b?.classList.remove('overflow-hidden');
-  }, []);
-
-  // ------- Helpers
-  const values = watch(); // <- ahora es FormValues, no any
-
+  // Validaciones
   const isContactValid = () => {
     const isNameValid = values.name.trim().length > 1;
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email);
@@ -239,38 +233,78 @@ export default function CalificationFormDirect({ variant }: Props) {
     return isNameValid && isEmailValid && isPhoneValid;
   };
 
+  const canAdvanceFromStep = (s: ContactStep | SingleStep) => {
+    if (s.type === 'contact') return isContactValid();
+    if (s.type === 'single' && s.required === true) {
+      return !!values[s.id]; // valor seleccionado
+    }
+    return true;
+  };
+
   const back = () => setStepIndex((i) => Math.max(0, i - 1));
   const next = () => setStepIndex((i) => Math.min(totalSteps - 1, i + 1));
 
-  // Atajos teclado
+  // Atajos teclado (respetan validación)
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const step = steps[stepIndex];
-      if (step.type !== 'single') return;
+      if (step.type === 'single') {
+        const selectByIndex = (idx: number) => {
+          const opt = step.options[idx];
+          if (!opt) return;
+          setValue(step.id, opt.value as FormValues[SingleId], { shouldValidate: true });
+          next();
+        };
 
-      const selectByIndex = (idx: number) => {
-        const opt = step.options[idx];
-        if (!opt) return;
-        setValue(step.id, opt.value as FormValues[SingleId], { shouldValidate: true });
-        next();
-      };
-
-      const key = e.key.toLowerCase();
-      if (['1', '2', '3', '4', '5', '6'].includes(key)) selectByIndex(Number(key) - 1);
-      if (['a', 'b', 'c', 'd', 'e', 'f'].includes(key))
-        selectByIndex(key.charCodeAt(0) - 'a'.charCodeAt(0));
-      if (key === 'enter') {
-        if (stepIndex === 0 ? isContactValid() : true) next();
+        const key = e.key.toLowerCase();
+        if (['1', '2', '3', '4', '5', '6'].includes(key)) selectByIndex(Number(key) - 1);
+        if (['a', 'b', 'c', 'd', 'e', 'f'].includes(key))
+          selectByIndex(key.charCodeAt(0) - 'a'.charCodeAt(0));
       }
-      if (key === 'escape' || e.key === 'ArrowLeft') back();
-      if (e.key === 'ArrowRight') next();
+
+      if (e.key === 'Enter' || e.key === 'ArrowRight') {
+        const s = steps[stepIndex];
+        if (canAdvanceFromStep(s)) next();
+      }
+      if (e.key === 'Escape' || e.key === 'ArrowLeft') back();
     };
+
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [stepIndex, steps, setValue]);
+  }, [stepIndex, steps, setValue, values]);
+
+  // Query param ad
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const adParam = searchParams.get('ad');
+    if (adParam) setValue('ad', adParam);
+  }, [setValue]);
+
+  // Bloquear scroll del body
+  useEffect(() => {
+    const b = document.querySelector('body');
+    b?.classList.add('overflow-hidden');
+    return () => b?.classList.remove('overflow-hidden');
+  }, []);
 
   // ------- Submit
   const onSubmit = async (data: FormValues) => {
+    // ✅ Type guard reutilizable
+    const isSingleRequired = (s: ContactStep | SingleStep): s is SingleStep =>
+      s.type === 'single' && s.required === true;
+
+    // Doble seguro: si falta algún single requerido, volver al primero que falte
+    const requiredIds = steps
+      .filter(isSingleRequired)      // <- ahora devuelve siempre boolean y estrecha el tipo
+      .map((s) => s.id);
+
+    const missing = requiredIds.find((id) => !data[id]);
+    if (missing) {
+      const idx = steps.findIndex((s) => s.type === 'single' && s.id === missing);
+      if (idx >= 0) setStepIndex(idx);
+      return;
+    }
+
     try {
       setLoading(true);
 
@@ -327,18 +361,6 @@ export default function CalificationFormDirect({ variant }: Props) {
   };
 
   // ---- UI
-  const Progress = () => {
-    const percent = Math.round(((stepIndex + 1) / totalSteps) * 100);
-    return (
-      <div className="w-full mb-6">
-        <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-          <div className="h-2 bg-[#fbff00] transition-all" style={{ width: `${percent}%` }} />
-        </div>
-        <p className="text-white/70 text-xs mt-2">{percent}% completado</p>
-      </div>
-    );
-  };
-
   const CardOption = ({
     index,
     text,
@@ -373,8 +395,6 @@ export default function CalificationFormDirect({ variant }: Props) {
         ref={containerRef}
         className="w-full md:max-w-[720px] max-h-[calc(100vh-80px)] overflow-y-auto rounded-[20px] border border-white/10 bg-[#111] p-6 md:p-10 shadow-2xl"
       >
-        {/* <Progress /> */}
-
         <h2 className="text-[22px] md:text-[26px] font-semibold text-white leading-tight">
           {step.title}
         </h2>
@@ -477,21 +497,18 @@ export default function CalificationFormDirect({ variant }: Props) {
             </button>
 
             {isLast ? (
-              <button type="submit" className="cf-btn" disabled={loading}>
+              <button type="submit" className="cf-btn" disabled={loading || !canAdvanceFromStep(step)}>
                 {loading ? 'Cargando...' : 'Aceptar y Agendar'}
               </button>
             ) : (
               <button
                 type="button"
                 onClick={() => {
-                  if (step.type === 'contact') {
-                    if (isContactValid()) setStepIndex((i) => i + 1);
-                  } else {
-                    setStepIndex((i) => i + 1);
-                  }
+                  const s = steps[stepIndex];
+                  if (canAdvanceFromStep(s)) setStepIndex((i) => i + 1);
                 }}
                 className="cf-btn"
-                disabled={loading || (step.type === 'contact' && !isContactValid())}
+                disabled={loading || !canAdvanceFromStep(step)}
               >
                 Continuar
                 {!loading && (
@@ -522,7 +539,3 @@ export default function CalificationFormDirect({ variant }: Props) {
     </div>
   );
 }
-
-/* Si no tenés .cf-btn:
-.cf-btn { @apply inline-flex items-center justify-center gap-2 rounded-lg bg-[#fbff00] text-black font-semibold px-5 py-3 hover:brightness-95 transition disabled:opacity-60 disabled:cursor-not-allowed; }
-*/
