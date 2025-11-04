@@ -202,6 +202,7 @@ export default function ThankYou() {
         >
           Confirmar mi asistencia por WhatsApp
         </a>
+        <p className="text-red-500 text-[14px] text-center mt-2">En caso de no confirmar, tu llamada va a ser cancelada</p>
 
         {/* FAQ (desplazada hacia abajo) */}
         <h3 className="text-center text-black text-[24px] leading-[115%] font-bold mb-6 mt-10">
@@ -234,33 +235,12 @@ export default function ThankYou() {
           </AccordionItem>
         </Accordion>
 
-        {/* Add to Calendar + vCard + Reprogramar */}
-        <div className="mt-6 grid sm:grid-cols-2 gap-3">
-          {/* <div className="rounded-xl border p-4">
-            <p className="font-semibold text-[16px] text-black mb-2">Agendalo ahora</p>
-            <div className="flex flex-wrap gap-2">
-              <a className="underline text-blue-600" target="_blank" href={gcalHref}>Google Calendar</a>
-              <a className="underline text-blue-600" target="_blank" href={outlookHref}>Outlook</a>
-              <a className="underline text-blue-600" download="nano-reunion.ics" href={appleIcsData}>Apple/ICS</a>
-            </div>
-            <p className="text-[13px] text-black/70 mt-2">Sugerencia: dejá un recordatorio 10–15 min antes.</p>
-          </div> */}
-          <div className="rounded-xl border p-4">
-            <p className="font-semibold text-[16px] text-black mb-2">Evitar no-show</p>
-            <div className="flex flex-wrap gap-2">
-              <a className="underline text-blue-600" download="nano.vcf" href={vcardData}>Guardar contacto de Nano</a>
-              <a className="underline text-blue-600" target="_blank" href="CALENDLY_LINK">Reprogramar</a>
-            </div>
-            <p className="text-[13px] text-black/70 mt-2">Si te surge algo, reprogramá con tiempo.</p>
-          </div>
-        </div>
-
         {/* Social proof compacto arriba del fold */}
         <div className="grid md:grid-cols-3 gap-4 mt-8">
           {[
             { txt: "-17 KG en 3 Meses", img: "/images/testimonios/testimonio-1.webp" },
-            { txt: "-6 KG en 1 Mes", img: "/images/testimonios/testimonio-2.webp" },
-            { txt: "-8 KG en 2 Meses", img: "/images/testimonios/testimonio-6.webp" },
+            { txt: "-4 KG en 1 Mes", img: "/images/testimonios/testimonio-3.webp" },
+            { txt: "-5,5 KG en 1 Meses", img: "/images/testimonios/testimonio-5.webp" },
           ].map((t, i) => (
             <div key={i}>
               <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">{t.txt}</p>
@@ -269,9 +249,28 @@ export default function ThankYou() {
           ))}
         </div>
 
+        {/* Checklist de compromiso */}
+        <div className="rounded-xl border p-4 bg-white mt-8">
+          <p className="font-semibold text-[18px] mb-2 text-black">
+            Checklist (2 minutos) — marcá para habilitar la confirmación:
+          </p>
+          <label className="flex items-start gap-3 text-[16px] text-black mb-2">
+            <input type="checkbox" className="mt-1" checked={agreeQuietPlace} onChange={e => setAgreeQuietPlace(e.target.checked)} />
+            <span>Voy a estar en un lugar tranquilo, sin interrupciones.</span>
+          </label>
+          <label className="flex items-start gap-3 text-[16px] text-black mb-2">
+            <input type="checkbox" className="mt-1" checked={agreeOnTime} onChange={e => setAgreeOnTime(e.target.checked)} />
+            <span>Me comprometo a llegar a tiempo (respeto el cupo y la agenda).</span>
+          </label>
+          <label className="flex items-start gap-3 text-[16px] text-black">
+            <input type="checkbox" className="mt-1" checked={agreeNoReschedule} onChange={e => setAgreeNoReschedule(e.target.checked)} />
+            <span>Si no puedo asistir, reprogramo con anticipación para liberar el lugar.</span>
+          </label>
+        </div>
+
         {/* CTA repetido al final */}
         <a
-          className={`py-3 block text-center mx-auto md:w-fit mt-8 px-8 font-bold rounded-lg transition ${
+          className={`py-3 block text-center mx-auto md:w-fit mt-4 px-8 font-bold rounded-lg transition ${
             confirmEnabled ? "bg-green-600 text-white hover:opacity-90" : "bg-gray-300 text-gray-600 cursor-not-allowed"
           }`}
           target="_blank"
@@ -283,7 +282,7 @@ export default function ThankYou() {
         </a>
 
         {/* Nota de escasez real */}
-        <p className="text-center text-[13px] text-black/60 mt-4">
+        <p className="text-center text-[14px] text-red-500 mt-2">
           Cupos limitados: si no confirmás, el sistema libera tu lugar automáticamente.
         </p>
       </div>
