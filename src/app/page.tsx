@@ -54,16 +54,15 @@ export default function Home() {
           </h1>
           <section className="relative">
             <div
-              className="border-4 overflow-clip rounded-[12px] md:rounded-[16px] border-[#fbff00] mt-6 max-w-[750px] mx-auto"
+              className="bg-[#fbff00] border-4 overflow-clip rounded-[12px] md:rounded-[16px] border-[#fbff00] mt-6 max-w-[750px] mx-auto"
             >
               <div className="p-1 md:p-2 text-center text-[14px] text-black font-bold bg-[#fbff00]">
                 CLIC PARA ACTIVAR EL SONIDO
               </div>
               <div
-                className="bg-[#fbff00] aspect-video rounded-br-[8px] md:rounded-br-[12px] rounded-bl-[8px] md:rounded-bl-[12px]"
+                className="bg-[#fbff00] aspect-video rounded-[8px] md:rounded-[12px] overflow-clip"
               >
-                <iframe src="https://fast.wistia.net/embed/iframe/2grptuep8y?web_component=true&seo=true" title="2025-09-23 11-03-45 Video" allow="autoplay; fullscreen" scrolling="no" className="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe>
-                <script src="https://fast.wistia.net/player.js" async></script>
+                <iframe className="w-full aspect-video" id="panda-f3e4e036-787b-4690-b86e-4fbac6bdd47f" src="https://player-vz-5c2adb98-6a4.tv.pandavideo.com/embed/?v=f3e4e036-787b-4690-b86e-4fbac6bdd47f" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"></iframe>
               </div>
             </div>
           </section>

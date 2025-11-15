@@ -139,25 +139,7 @@ export default function ThankYou() {
           <span><strong>¡Último paso!</strong> Confirmá y agendá para no perder tu cupo.</span>
         </p>
 
-        {/* Video corto arriba (30–60s) */}
-        {/* Wistia / Loom */}
-        {/* <div className="mb-6">
-          <div className="wistia_responsive_padding">
-            <div className="wistia_responsive_wrapper">
-              <iframe
-                src="https://fast.wistia.net/embed/iframe/fozjbg7l5u?web_component=true&seo=true"
-                title="Mensaje de Nano"
-                allow="autoplay; fullscreen"
-                scrolling="no"
-                className="wistia_embed aspect-video"
-                name="wistia_embed"
-                width="100%"
-                height="100%"
-              />
-            </div>
-          </div>
-          <script src="https://fast.wistia.net/player.js" async></script>
-        </div> */}
+        <iframe className="w-full aspect-video my-4" id="panda-4f47185b-9860-47d9-b95b-ada5b45addcf" src="https://player-vz-5c2adb98-6a4.tv.pandavideo.com/embed/?v=4f47185b-9860-47d9-b95b-ada5b45addcf" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"></iframe>
 
         {/* Título + countdown */}
         <h1 className="text-[26px] text-black font-bold leading-[115%] mb-2">
