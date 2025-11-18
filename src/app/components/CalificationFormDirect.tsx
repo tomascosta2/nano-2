@@ -201,12 +201,12 @@ export default function CalificationFormDirect({ variant }: Props) {
           {
             value: 'presupuesto-intermedio',
             label:
-              'Quiero un plan serio, con un equipo de profesionales ayudándome 1 a 1 y que justifique la inversión.',
+              'Quiero un plan serio, con un equipo de profesionales ayudándome 1 a 1. (Cuento con al menos usd250 para empezar)',
           },
           {
             value: 'presupuesto-alto',
             label:
-              'Quiero la mejor opción disponible, independientemente del precio.',
+              'Puedo pagar el trimestre de usd500 por adelantado para empezar lo antes posible',
           },
         ],
       },

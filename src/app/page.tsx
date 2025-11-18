@@ -34,23 +34,21 @@ export default function Home() {
           <h3
             className="text-center text-black text-[14px] py-3 font-bold leading-[115%]"
           >
-            Te exigis, te castigas, lo das todo… y aún así ¿no te reconoces frente al espejo?
+            {variant === 'A' && (
+              <span>Te exigis, te castigas, lo das todo… y aún así ¿no te reconoces frente al espejo?</span>
+            )}
+            {variant === 'B' && (
+              <span>¿Tenes un buen trabajo pero te has dejado estar con tu fisico?</span>
+            )}
           </h3>
         </div>
       </header>
       <section className="mt-6 md:mt-8 pb-[60px] md:pb-[80px]">
         <div className="cf-container">
           <h1 className="text-center text-[20px] md:text-[32px] font-bold leading-[120%]">
-            {variant === 'A' && (
-              <span>
-                IMAGINATE BAJAR ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICAR EN 90 DÍAS</span> CON EL MÉTODO FIT90 - <span className="text-[#fbff00]">SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES</span>
-              </span>
-            )}
-            {variant === 'B' && (
-              <span>
-                BAJÁ ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICÁ EN 90 DÍAS</span> CON MI <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
-              </span>
-            )}
+            <span>
+              BAJÁ ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICÁ EN 90 DÍAS</span> CON MI <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+            </span>
           </h1>
           <section className="relative">
             <div
