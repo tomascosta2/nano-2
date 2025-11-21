@@ -201,12 +201,12 @@ export default function CalificationFormDirect({ variant }: Props) {
           {
             value: 'presupuesto-intermedio',
             label:
-              'Quiero un plan serio, con un equipo de profesionales ayudándome 1 a 1. (Cuento con al menos usd250 para empezar)',
+              'Quiero un plan serio, con un equipo de profesionales ayudándome 1 a 1.',
           },
           {
             value: 'presupuesto-alto',
             label:
-              'Puedo pagar el trimestre de usd500 por adelantado para empezar lo antes posible',
+              'Quiero la mejor opción disponible, se que cambiar mi fisico lo vale.',
           },
         ],
       },
@@ -317,7 +317,8 @@ export default function CalificationFormDirect({ variant }: Props) {
       const isQualified =
         (data.presupuesto === 'presupuesto-intermedio' || data.presupuesto === 'presupuesto-alto') &&
         (data.edad === 'adulto' || data.edad === 'mayor') &&
-        (data.urgencia === '7' || data.urgencia === '10');
+        (data.urgencia === '7' || data.urgencia === '10') &&
+        (data.ocupacion === 'negocio-propio' || data.ocupacion === 'profesional' );
 
       localStorage.setItem('isQualified', isQualified ? 'true' : 'false');
       localStorage.setItem('name', data.name);
