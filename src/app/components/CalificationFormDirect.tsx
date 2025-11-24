@@ -355,7 +355,11 @@ export default function CalificationFormDirect({ variant }: Props) {
         });
       }
 
-      window.location.href = '/pages/calendly';
+      if (isQualified) {
+        window.location.href = '/pages/calendly';
+      } else {
+        window.location.href = '/pages/nothing-for-you-now';
+      }
     } catch (e) {
       console.error(e);
       setLoading(false);
