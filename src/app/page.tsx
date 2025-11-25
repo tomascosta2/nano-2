@@ -96,7 +96,7 @@ export default function Home() {
             <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
               {isUnlocked
                 ? "Cupos limitados - No te lo pierdas!"
-                : "El botón se habilitará luego de ver el video."}
+                : "⚠️ El botón se habilitará luego de ver el video."}
             </p>
           </div>
         </div>
