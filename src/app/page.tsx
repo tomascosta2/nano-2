@@ -154,69 +154,82 @@ export default function Home() {
               </p>
             </div>
           </section>
-
-          <section className="py-[80px] relative overflow-clip">
-            <div className="cf-container">
-              <h2
-                className="text-[28px] font-bold text-white text-center uppercase max-w-[600px] leading-[120%] mx-auto"
-              >
-                ESTOS RESULTADOS PODES OBTENER SI AGENDAS HOY
-              </h2>
-              <p className="text-white/80 text-center mt-4 max-w-[400px] mx-auto">Si ellos pudieron, vos también podés. Solo necesitás un método pensado específicamente para vos.</p>
-
-              <div className="grid md:grid-cols-3 gap-4 mt-8">
-                <div>
-                  <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
-                    -17 KG en 3 Meses
-                  </p>
-                  <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
-                </div>
-                <div>
-                  <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
-                    -6 KG en 1 Mes
-                  </p>
-                  <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
-                </div>
-                <div>
-                  <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
-                    -4 KG en 1 Mes
-                  </p>
-                  <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
-                </div>
-                <div>
-                  <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
-                    -5 KG en 1 Mes
-                  </p>
-                  <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
-                </div>
-                <div>
-                  <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
-                    -5.5 KG en menos de 1 Mes
-                  </p>
-                  <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
-                </div>
-                <div>
-                  <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
-                    -8 KG en 2 Meses
-                  </p>
-                  <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-6.webp" alt="Nano Ponce Fit - Cambio 3" />
-                </div>
-              </div>
-              <button
-                className="cf-btn mt-8"
-                onClick={() => { setIsFormOpened(true) }}
-              >
-                ¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!
-              </button>
-              <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
-                Cupos limitados - No te lo pierdas!
-              </p>
-            </div>
-            <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute left-[calc(50%-300px)] md:-left-[300px] -bottom-[300px] -z-50"></div>
-            <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute right-[calc(50%-300px)] md:-right-[300px] -bottom-[300px] -z-50"></div>
-          </section>
         </>
       )}
+
+      <section className="py-[60px] md:py-[80px] relative overflow-clip">
+        <div className="cf-container">
+          <h2
+            className="text-[28px] font-bold text-white text-center uppercase max-w-[600px] leading-[120%] mx-auto"
+          >
+            ESTOS RESULTADOS PODES OBTENER SI AGENDAS HOY
+          </h2>
+          <p className="text-white/80 text-center mt-4 max-w-[400px] mx-auto">Si ellos pudieron, vos también podés. Solo necesitás un método pensado específicamente para vos.</p>
+
+          <div className="grid md:grid-cols-3 gap-4 mt-8">
+            <div>
+              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+                -17 KG en 3 Meses
+              </p>
+              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
+            </div>
+            <div>
+              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+                -6 KG en 1 Mes
+              </p>
+              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
+            </div>
+            <div>
+              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+                -4 KG en 1 Mes
+              </p>
+              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
+            </div>
+            <div>
+              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+                -5 KG en 1 Mes
+              </p>
+              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
+            </div>
+            <div>
+              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+                -5.5 KG en menos de 1 Mes
+              </p>
+              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
+            </div>
+            <div className="h-[290px] overflow-clip relative">
+              <div className="absolute flex items-center justify-center w-full h-full bg-black/90">
+                <p className="text-white text-center px-8 font-semibold">
+                  +50 cambios como estos
+                  <br/>
+                  (Mirá el video completo y agendá tu sesión de diagnóstico)
+                </p>
+              </div>
+              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-6.webp" alt="Nano Ponce Fit - Cambio 3" />
+            </div>
+          </div>
+          {/* Botón bloqueado 5 minutos */}
+          <div className="mt-8">
+            <button
+              className="cf-btn disabled:opacity-60 disabled:cursor-not-allowed"
+              disabled={!isUnlocked}
+              onClick={() => {
+                if (!isUnlocked) return;
+                setIsFormOpened(true);
+              }}
+            >
+              ¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!
+            </button>
+            <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
+              {isUnlocked
+                ? "Cupos limitados - No te lo pierdas!"
+                : "⚠️ El botón se habilitará luego de ver el video."}
+            </p>
+          </div>
+        </div>
+        <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute left-[calc(50%-300px)] md:-left-[300px] -bottom-[300px] md:block hidden -z-50"></div>
+        <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute right-[calc(50%-300px)] md:-right-[300px] -bottom-[300px] md:block hidden -z-50"></div>
+      </section>
 
       <p className="pb-6 pt-8 text-[14px] text-center px-4 text-white/60">© Nano Fitness 2025. Todos los derechos reservados.</p>
     </div>
