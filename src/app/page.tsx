@@ -45,12 +45,7 @@ export default function Home() {
           <h3
             className="text-center text-black text-[14px] py-3 font-bold leading-[115%]"
           >
-            {variant === 'A' && (
-              <span>Te exigis, te castigas, lo das todo… y aún así ¿no te reconoces frente al espejo?</span>
-            )}
-            {variant === 'B' && (
-              <span>¿Tenes un buen trabajo pero te has dejado estar con tu fisico?</span>
-            )}
+              <span>Te exigis, te castigas, lo das todo… y aún así ¿no te reconoces frente al espejo?</span>           
           </h3>
         </div>
       </header>
