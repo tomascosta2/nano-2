@@ -158,11 +158,11 @@ export default function CalificationFormDirect({ variant }: Props) {
         subtitle:
           'Esto nos ayuda a adaptar tu alimentación y entrenamiento a tu estilo de vida.',
         options: [
-          { value: 'negocio-propio', label: 'Tengo mi propio negocio' },
+          { value: 'negocio-propio', label: 'Tengo mi propio negocio con empleados' },
           { value: 'profesional', label: 'Soy profesional (Abogado, Médico, etc.)' },
-          { value: 'trabajador', label: 'Trabajador' },
-          { value: 'estudiante', label: 'Estudiante' },
-          { value: 'trabajador-estudiante', label: 'Trabajador y Estudiante' },
+          { value: 'freelance', label: 'Freelance / Home office' },
+          { value: 'trabajador', label: 'Trabajo manual / fisico' },
+          { value: 'otro', label: 'Otro' },
         ],
       },
       {
@@ -171,7 +171,7 @@ export default function CalificationFormDirect({ variant }: Props) {
         required: true,
         title: '¿Estás listo/a para comprometerte 90 días con tu cambio?*',
         options: [
-          { value: 'si', label: 'Sí, sé que los cambios duraderos no se logran en 2 semanas.' },
+          { value: 'si', label: 'Sí, sé que los cambios duraderos no se logran en 1 semana.' },
           { value: 'no', label: 'No, ahora no puedo comprometerme a 90 días.' },
         ],
       },
@@ -318,7 +318,7 @@ export default function CalificationFormDirect({ variant }: Props) {
         (data.presupuesto === 'presupuesto-intermedio' || data.presupuesto === 'presupuesto-alto') &&
         (data.edad === 'adulto' || data.edad === 'mayor') &&
         (data.urgencia === '5' || data.urgencia === '7' || data.urgencia === '10') &&
-        (data.ocupacion === 'negocio-propio' || data.ocupacion === 'profesional' );
+        (data.ocupacion === 'negocio-propio' || data.ocupacion === 'profesional' || data.ocupacion === 'freelance' );
 
       localStorage.setItem('isQualified', isQualified ? 'true' : 'false');
       localStorage.setItem('name', data.name);
