@@ -89,10 +89,10 @@ export default function CalendlyFast() {
 						<span className="text-[#fbff00]">¡Último paso!</span> Elegí una fecha y hora que te queden cómodas y empezá hoy mismo!
 					</h1> */}
 					<p className="text-center max-w-[800px] text-[20px] font-semibold mx-auto">
-						Trabajo con un cupo limitado de hombres por mes, para asegurar la calidad y personalización del seguimiento durante tu paso por el programa.
+						Trabajo con un cupo limitado de clientes por mes, para asegurar la calidad y personalización del seguimiento durante tu paso por el programa.
 						<br /><br />
 						Si estás interesado y querés aplicar al programa, 
-						<span className="text-[#fbff00]"> agendá hoy mismo tu sesión de diagnóstico.</span>
+						<span className="text-[#fbff00]"> agendá hoy mismo tu sesión de diagnóstico 👇</span>
 					</p>
 
 					<div className="grid md:grid-cols-2 gap-8 mt-8">
