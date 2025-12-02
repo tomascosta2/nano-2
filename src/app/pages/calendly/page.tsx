@@ -85,11 +85,17 @@ export default function CalendlyFast() {
 			{/* HERO + contenido tuyo igual que antes… */}
 			<section className="pt-8 pb-[80px]">
 				<div className="max-w-[1200px] mx-auto px-4">
-					<h1 className="text-[24px] md:text-[32px] font-bold leading-[120%] max-w-[800px] mb-8 mx-auto text-center">
+					{/* <h1 className="text-[24px] md:text-[32px] font-bold leading-[120%] max-w-[800px] mx-auto text-center">
 						<span className="text-[#fbff00]">¡Último paso!</span> Elegí una fecha y hora que te queden cómodas y empezá hoy mismo!
-					</h1>
+					</h1> */}
+					<p className="text-center max-w-[800px] text-[20px] font-semibold mx-auto">
+						Trabajo con un cupo limitado de hombres por mes, para asegurar la calidad y personalización del seguimiento durante tu paso por el programa.
+						<br /><br />
+						Si estás interesado y querés aplicar al programa, 
+						<span className="text-[#fbff00]"> agendá hoy mismo tu sesión de diagnóstico.</span>
+					</p>
 
-					<div className="grid md:grid-cols-2 gap-8">
+					<div className="grid md:grid-cols-2 gap-8 mt-8">
 						{/* Columna de textos (igual que la tuya) */}
 						<div className="md:-order-1 order-2">
 							<h2 className="text-[20px] sm:text-[28px] font-bold leading-[120%] mb-6 sm:mb-8 text-white">
