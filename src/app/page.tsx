@@ -54,9 +54,17 @@ export default function Home() {
       <section className="mt-6 md:mt-8 pb-[60px] md:pb-[80px]">
         <div className="cf-container">
           <h1 className="text-center text-[20px] md:text-[32px] font-bold leading-[120%]">
-            <span>
-              BAJÁ ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICÁ EN 90 DÍAS</span> CON MI <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
-            </span>
+            {variant === 'A' && (
+              <span>
+                BAJÁ ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICÁ EN 90 DÍAS</span> CON MI <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+              </span>
+            )}
+
+            {variant === 'B' && (
+              <span>
+                <span className="text-[#fbff00]">PERDE LA PANZA, GANA ENERGÍA Y TONIFICA EN 90 DÍAS</span> CON MI MÉTODO <span className="text-[#fbff00]">FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+              </span>
+            )}
           </h1>
           <section className="relative">
             <div
