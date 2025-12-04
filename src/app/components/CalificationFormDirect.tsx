@@ -196,17 +196,17 @@ export default function CalificationFormDirect({ variant }: Props) {
           {
             value: 'presupuesto-bajo',
             label:
-              'Quiero una solución económica para empezar por mi cuenta. (En este caso NO agendes, para cambiar tu vida necesitás invertir)',
+              'Quiero una solución económica para empezar por mi cuenta. (En este caso NO agendes, para ayudarte necesitas algo personalizado)',
           },
           {
             value: 'presupuesto-intermedio',
             label:
-              'Quiero un plan serio, con un equipo de profesionales ayudándome 1 a 1.',
+              'Quiero un plan serio, con un equipo de profesionales ayudándome 1 a 1 y que sea algo 100% personalizado para asegurar mi cambio en los 3 meses de trabajo.',
           },
           {
             value: 'presupuesto-alto',
             label:
-              'Quiero la mejor opción disponible, se que cambiar mi fisico lo vale.',
+              'Quiero la mejor opción disponible independientemente del precio, se que mejorar mi fisico y salud lo vale.',
           },
         ],
       },
