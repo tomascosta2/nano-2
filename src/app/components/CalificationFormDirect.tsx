@@ -382,10 +382,10 @@ export default function CalificationFormDirect({ variant }: Props) {
       type="button"
       onClick={onClick}
       className={`group w-full text-left rounded-xl border border-white/15 px-5 py-4 mb-3 bg-[#1a1a1a] hover:bg-[#232323] transition
-        ${selected ? 'ring-2 ring-[#fbff00] border-[#fbff00]/60' : ''}`}
+        ${selected ? 'ring-2 ring-[#fcff37] border-[#fcff37]/60' : ''}`}
     >
       <div className="flex items-center gap-3">
-        <span className="inline-flex items-center justify-center min-w-8 h-8 rounded-md bg-[#fbff00] text-black font-bold">
+        <span className="inline-flex items-center justify-center min-w-8 h-8 rounded-md bg-[#fcff37] text-black font-bold">
           {LETTERS[index]}
         </span>
         <span className="text-white/90 leading-snug">{text}</span>

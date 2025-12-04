@@ -75,7 +75,7 @@ export default function CalendlyFast() {
 			// hide_landing_page_details: "1",
 			// hide_event_type_details: "1",
 			// text_color: "000000",
-			// primary_color: "fbff00",
+			// primary_color: "fcff37",
 		});
 		return `${base}?${params.toString()}`;
 	}, [name, email]);
@@ -86,7 +86,7 @@ export default function CalendlyFast() {
 			<section className="pt-8 pb-[80px]">
 				<div className="max-w-[1200px] mx-auto px-4">
 					<h1 className="text-[24px] md:text-[32px] font-bold leading-[120%] max-w-[800px] mx-auto text-center">
-						<span className="text-[#fbff00]">¡Último paso!</span> Elegí una fecha y hora que te queden cómodas y empezá hoy mismo!
+						<span className="text-[#fcff37]">¡Último paso!</span> Elegí una fecha y hora que te queden cómodas y empezá hoy mismo!
 					</h1>
 
 					<div className="grid md:grid-cols-2 gap-8 mt-8">

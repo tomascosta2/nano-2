@@ -40,12 +40,12 @@ export default function Home() {
           <CalificationFormDirect variant={variant} />
         )
       }
-      <header className="bg-[#fbff00] max-w-[85%] w-[400px] rounded-full mt-8 md:mt-12 mx-auto">
+      <header className="bg-[#fcff37] max-w-[85%] w-[400px] rounded-full mt-8 md:mt-12 mx-auto">
         <div className="cf-container">
           <h3
             className="text-center text-black text-[14px] py-3 font-bold leading-[115%]"
           >
-              <span>Te exigis, te castigas, lo das todo… y aún así ¿no te reconoces frente al espejo?</span>           
+            <span>Te exigis, te castigas, lo das todo… y aún así ¿no te reconoces frente al espejo?</span>
           </h3>
         </div>
       </header>
@@ -56,25 +56,25 @@ export default function Home() {
           <h1 className="text-center text-[20px] md:text-[32px] font-bold leading-[120%]">
             {variant === 'A' && (
               <span>
-                BAJÁ ENTRE <span className="text-[#fbff00]">6 Y 15 KG DE GRASA CORPORAL Y TONIFICÁ EN 90 DÍAS</span> CON MI <span className="text-[#fbff00]">MÉTODO FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+                Bajá entre <span className="text-[#fcff37]">6 y 15 kg de grasa corporal y tonificá en 90 días</span> con mi <span className="text-[#fcff37]">Protocolo Fit90</span> - sin dietas extremas ni rutinas imposibles
               </span>
             )}
 
             {variant === 'B' && (
               <span>
-                <span className="text-[#fbff00]">PERDE LA PANZA, GANA ENERGÍA Y TONIFICA EN 90 DÍAS</span> CON MI MÉTODO <span className="text-[#fbff00]">FIT90</span> - SIN DIETAS EXTREMAS NI RUTINAS IMPOSIBLES
+                <span className="text-[#fcff37]">Perde la panza, gana energía y tonificá en 90 días</span> con mi protocolo <span className="text-[#fcff37]">Fit90</span> - sin dietas extremas ni rutinas imposibles
               </span>
             )}
           </h1>
           <section className="relative">
             <div
-              className="bg-[#fbff00] border-4 overflow-clip rounded-[12px] md:rounded-[16px] border-[#fbff00] mt-6 max-w-[750px] mx-auto"
+              className="bg-[#fcff37] border-4 overflow-clip rounded-[12px] md:rounded-[16px] border-[#fcff37] mt-6 max-w-[750px] mx-auto"
             >
-              <div className="p-1 md:p-2 text-center text-[14px] text-black font-bold bg-[#fbff00]">
+              <div className="p-1 md:p-2 text-center text-[14px] text-black font-bold bg-[#fcff37]">
                 <span>PASO 1 de 2:</span> MIRÁ EL VIDEO COMPLETO
               </div>
               <div
-                className="bg-[#fbff00] aspect-video rounded-[8px] md:rounded-[12px] overflow-clip"
+                className="bg-[#fcff37] aspect-video rounded-[8px] md:rounded-[12px] overflow-clip"
               >
                 <iframe className="w-full aspect-video" id="panda-f3e4e036-787b-4690-b86e-4fbac6bdd47f" src="https://player-vz-5c2adb98-6a4.tv.pandavideo.com/embed/?v=f3e4e036-787b-4690-b86e-4fbac6bdd47f" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"></iframe>
               </div>
@@ -120,7 +120,7 @@ export default function Home() {
                   VIDEO_TESTIMONIALS.map((testimonial) => {
                     return (
                       <div key={testimonial.video} className="p-2 rounded-[24px] relative overflow-clip">
-                        <div className="bg-[#fbff00] size-[600px] md:size-[700px] top-0 md:-top-[100px] blur-[100px] opacity-[70%] rounded-full absolute left-[calc(50%-300px)] md:left-[calc(50%-350px)] -z-50"></div>
+                        <div className="bg-[#fcff37] size-[600px] md:size-[700px] top-0 md:-top-[100px] blur-[100px] opacity-[70%] rounded-full absolute left-[calc(50%-300px)] md:left-[calc(50%-350px)] -z-50"></div>
                         <div className="relative bg-[#1a1a00] z-50 p-8 md:p-[50px] rounded-[20px] flex md:flex-row flex-col gap-4 md:gap-8">
                           <div className="w-full md:min-w-[360px] aspect-video rounded-[10px] overflow-hidden">
                             <iframe
@@ -170,41 +170,41 @@ export default function Home() {
           <p className="text-white/80 text-center mt-4 max-w-[400px] mx-auto">Si ellos pudieron, vos también podés. Solo necesitás un método pensado específicamente para vos.</p>
 
           <div className="grid md:grid-cols-3 gap-4 mt-8">
-            <div>
-              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+            <div className="p-1 bg-[#fcff37] rounded-[14px]">
+              <p className="text-center py-2 bg-[#fcff37] text-black font-semibold">
                 -17 KG en 3 Meses
               </p>
-              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
+              <img className="w-full h-[290px] max-h-full rounded-[12px] object-cover" src="/images/testimonios/testimonio-1.webp" alt="Nano Ponce Fit - Cambio 1" />
             </div>
-            <div>
-              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+            <div className="p-1 bg-[#fcff37] rounded-[14px]">
+              <p className="text-center py-2 bg-[#fcff37] text-black font-semibold">
                 -6 KG en 1 Mes
               </p>
-              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
+              <img className="w-full h-[290px] max-h-full rounded-[12px] object-cover" src="/images/testimonios/testimonio-2.webp" alt="Nano Ponce Fit - Cambio 2" />
             </div>
-            <div>
-              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+            <div className="p-1 bg-[#fcff37] rounded-[14px]">
+              <p className="text-center py-2 bg-[#fcff37] text-black font-semibold">
                 -4 KG en 1 Mes
               </p>
-              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
+              <img className="w-full h-[290px] max-h-full rounded-[12px] object-cover" src="/images/testimonios/testimonio-3.webp" alt="Nano Ponce Fit - Cambio 3" />
             </div>
-            <div>
-              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+            <div className="p-1 bg-[#fcff37] rounded-[14px]">
+              <p className="text-center py-2 bg-[#fcff37] text-black font-semibold">
                 -5 KG en 1 Mes
               </p>
-              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
+              <img className="w-full h-[290px] max-h-full rounded-[12px] object-cover" src="/images/testimonios/testimonio-4.webp" alt="Nano Ponce Fit - Cambio 3" />
             </div>
-            <div>
-              <p className="text-center py-2 bg-[#fbff00] text-black font-semibold">
+            <div className="p-1 bg-[#fcff37] rounded-[14px]">
+              <p className="text-center py-2 bg-[#fcff37] text-black font-semibold">
                 -5.5 KG en menos de 1 Mes
               </p>
-              <img className="w-full h-[290px] max-h-full object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
+              <img className="w-full h-[290px] max-h-full rounded-[12px] object-cover" src="/images/testimonios/testimonio-5.webp" alt="Nano Ponce Fit - Cambio 3" />
             </div>
             <div className="h-[290px] overflow-clip relative">
               <div className="absolute flex items-center justify-center w-full h-full bg-black/90">
                 <p className="text-white text-center px-8 font-semibold">
                   +50 cambios como estos
-                  <br/>
+                  <br />
                   (Mirá el video completo y agendá tu sesión de diagnóstico)
                 </p>
               </div>
@@ -230,8 +230,8 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute left-[calc(50%-300px)] md:-left-[300px] -bottom-[300px] md:block hidden -z-50"></div>
-        <div className="bg-[#fbff00] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute right-[calc(50%-300px)] md:-right-[300px] -bottom-[300px] md:block hidden -z-50"></div>
+        <div className="bg-[#fcff37] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute left-[calc(50%-300px)] md:-left-[300px] -bottom-[300px] md:block hidden -z-50"></div>
+        <div className="bg-[#fcff37] size-[600px] md:size-[700px] blur-[100px] md:blur-[200px] opacity-[50%] rounded-full absolute right-[calc(50%-300px)] md:-right-[300px] -bottom-[300px] md:block hidden -z-50"></div>
       </section>
 
       <p className="pb-6 pt-8 text-[14px] text-center px-4 text-white/60">© Nano Fitness 2025. Todos los derechos reservados.</p>
