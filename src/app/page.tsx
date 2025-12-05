@@ -81,7 +81,7 @@ export default function Home() {
             </div>
           </section>
           <p className="mt-4 text-center text-[16px] max-w-[700px] mx-auto">
-            <strong>PASO 2 de 2:</strong> Agenda una Llamada para Asegurar tu Lugar y tu Cambio Fisico.
+            <strong>PASO 2 de 2:</strong> Agenda una Llamada si te gustaria Trabajar con Nosotros
           </p>
 
           {/* Botón bloqueado 5 minutos */}
