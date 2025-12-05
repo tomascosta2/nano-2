@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsUnlocked(true);
-    }, 5 * 60 * 1000); // 5 minutos
+    }, 0 * 60 * 1000); // 5 minutos
 
     return () => clearTimeout(timer);
   }, []);
@@ -81,7 +81,7 @@ export default function Home() {
             </div>
           </section>
           <p className="mt-4 text-center text-[16px] max-w-[700px] mx-auto">
-            <strong>PASO 2 de 2:</strong> Agenda una Llamada si te gustaria Trabajar con Nosotros
+            <strong>PASO 2 de 2:</strong> Agenda una Llamada si te gustaria Trabajar con Nosotros.
           </p>
 
           {/* Botón bloqueado 5 minutos */}
@@ -98,7 +98,7 @@ export default function Home() {
             </button>
             <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
               {isUnlocked
-                ? "Cupos limitados - No te lo pierdas!"
+                ? "Este programa no es para todos. Solo trabajamos con 8 alumnos por mes. Si tu objetivo es lograr un resultado real, aplicá arriba."
                 : "⚠️ El botón se habilitará luego de ver el video."}
             </p>
           </div>
@@ -153,7 +153,7 @@ export default function Home() {
                 ¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!
               </button>
               <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
-                Cupos limitados - No te lo pierdas!
+                Este programa no es para todos. Solo trabajamos con 8 alumnos por mes. Si tu objetivo es lograr un resultado real, aplicá arriba.
               </p>
             </div>
           </section>
@@ -225,7 +225,7 @@ export default function Home() {
             </button>
             <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
               {isUnlocked
-                ? "Cupos limitados - No te lo pierdas!"
+                ? "Este programa no es para todos. Solo trabajamos con 8 alumnos por mes. Si tu objetivo es lograr un resultado real, aplicá arriba."
                 : "⚠️ El botón se habilitará luego de ver el video."}
             </p>
           </div>
