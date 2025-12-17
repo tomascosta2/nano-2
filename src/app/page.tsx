@@ -60,9 +60,9 @@ export default function Home() {
               </span>
             )}
 
-            {variant === 'B' && (
+            {variant === 'A' && (
               <span>
-                <span className="text-[#fcff37]">Perde la panza, gana energía y tonificá en 90 días</span> con mi protocolo <span className="text-[#fcff37]">Fit90</span> - sin dietas extremas ni rutinas imposibles
+                Bajá entre <span className="text-[#fcff37]">6 y 15 kg de grasa corporal, recupera tu energía y tonificá en 90 días</span> con mi <span className="text-[#fcff37]">Protocolo Fit90</span> - sin dietas extremas ni rutinas imposibles
               </span>
             )}
           </h1>
