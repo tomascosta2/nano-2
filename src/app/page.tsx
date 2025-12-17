@@ -60,7 +60,7 @@ export default function Home() {
               </span>
             )}
 
-            {variant === 'A' && (
+            {variant === 'B' && (
               <span>
                 Bajá entre <span className="text-[#fcff37]">6 y 15 kg de grasa corporal, recupera tu energía y tonificá en 90 días</span> con mi <span className="text-[#fcff37]">Protocolo Fit90</span> - sin dietas extremas ni rutinas imposibles
               </span>
