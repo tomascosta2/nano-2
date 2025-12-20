@@ -40,10 +40,10 @@ export default function Home() {
           <CalificationFormDirect variant={variant} />
         )
       }
-      <header className="bg-[#fcff37] max-w-[85%] w-[400px] rounded-full mt-8 md:mt-12 mx-auto">
+      <header className="bg-[#fcff37]/20 border border-[#fcff37]/80 max-w-[85%] w-[400px] rounded-full mt-8 md:mt-12 mx-auto">
         <div className="cf-container">
           <h3
-            className="text-center text-black text-[14px] py-3 font-bold leading-[115%]"
+            className="text-center text-white text-[14px] py-3 font-bold leading-[115%]"
           >
             <span>Te exigis, te castigas, lo das todo… y aún así ¿no te reconoces frente al espejo?</span>
           </h3>
@@ -53,18 +53,10 @@ export default function Home() {
       {/* Sección VSL (siempre visible) */}
       <section className="mt-6 md:mt-8 pb-[60px] md:pb-[80px]">
         <div className="cf-container">
-          <h1 className="text-center text-[20px] md:text-[32px] font-bold leading-[120%]">
-            {variant === 'A' && (
-              <span>
-                Bajá entre <span className="text-[#fcff37]">6 y 15 kg de grasa corporal y tonificá en 90 días</span> con mi <span className="text-[#fcff37]">Protocolo Fit90</span> - sin dietas extremas ni rutinas imposibles
-              </span>
-            )}
-
-            {variant === 'B' && (
-              <span>
-                Bajá entre <span className="text-[#fcff37]">6 y 15 kg de grasa corporal, recupera tu energía y tonificá en 90 días</span> con mi <span className="text-[#fcff37]">Protocolo Fit90</span> - sin dietas extremas ni rutinas imposibles
-              </span>
-            )}
+          <h1 className="text-center text-[22px] md:text-[32px] font-bold leading-[120%]">
+            <span>
+              Bajá entre <span className="text-[#fcff37]">6 y 15 kg de grasa corporal, recupera tu energía y tonificá en 90 días</span> con mi <span className="">Protocolo Fit90</span> - Sin dietas extremas ni rutinas imposibles
+            </span>
           </h1>
           <section className="relative">
             <div
@@ -74,7 +66,7 @@ export default function Home() {
                 <span>PASO 1 de 2:</span> MIRÁ EL VIDEO COMPLETO
               </div>
               <div
-                className="bg-[#fcff37] aspect-video rounded-[8px] md:rounded-[12px] overflow-clip"
+                className="bg-[#fbff00] aspect-video rounded-[8px] md:rounded-[12px] overflow-clip"
               >
                 <iframe className="w-full aspect-video" id="panda-f3e4e036-787b-4690-b86e-4fbac6bdd47f" src="https://player-vz-5c2adb98-6a4.tv.pandavideo.com/embed/?v=f3e4e036-787b-4690-b86e-4fbac6bdd47f" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"></iframe>
               </div>
@@ -94,7 +86,12 @@ export default function Home() {
                 setIsFormOpened(true);
               }}
             >
-              ¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!
+              {variant === 'A' && (
+                <span>¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!</span>
+              )}
+              {variant === 'B' && (
+                <span>¡QUIERO AGENDAR MI EVALUACIÓN GRATUITA!</span>
+              )}
             </button>
             <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
               {isUnlocked
@@ -150,7 +147,12 @@ export default function Home() {
                 className="cf-btn mt-8"
                 onClick={() => { setIsFormOpened(true) }}
               >
-                ¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!
+                {variant === 'A' && (
+                  <span>¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!</span>
+                )}
+                {variant === 'B' && (
+                  <span>¡QUIERO AGENDAR MI EVALUACIÓN GRATUITA!</span>
+                )}
               </button>
               <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
                 Este programa no es para todos. Solo trabajamos con 8 alumnos por mes. Si tu objetivo es lograr un resultado real, aplicá arriba.
@@ -221,7 +223,12 @@ export default function Home() {
                 setIsFormOpened(true);
               }}
             >
-              ¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!
+              {variant === 'A' && (
+                <span>¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!</span>
+              )}
+              {variant === 'B' && (
+                <span>¡QUIERO AGENDAR MI EVALUACIÓN GRATUITA!</span>
+              )}
             </button>
             <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
               {isUnlocked
