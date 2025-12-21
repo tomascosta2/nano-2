@@ -45,7 +45,7 @@ export default function Home() {
           <h3
             className="text-center text-white text-[14px] py-3 font-bold leading-[115%]"
           >
-            <span>Te exigis, te castigas, lo das todo… y aún así ¿no te reconoces frente al espejo?</span>
+            <span>Exclusivo para Profesionales +35</span>
           </h3>
         </div>
       </header>
@@ -54,9 +54,16 @@ export default function Home() {
       <section className="mt-6 md:mt-8 pb-[60px] md:pb-[80px]">
         <div className="cf-container">
           <h1 className="text-center text-[22px] md:text-[32px] font-bold leading-[120%]">
-            <span>
-              Bajá entre <span className="text-[#fcff37]">6 y 15 kg de grasa corporal, recupera tu energía y tonificá en 90 días</span> con mi <span className="">Protocolo Fit90</span> - Sin dietas extremas ni rutinas imposibles
-            </span>
+            {variant === 'A' && (
+              <span>
+                Bajá entre <span className="text-[#fcff37]">6 y 15 kg de grasa corporal, recupera tu energía y tonificá en 90 días</span> con mi <span className="">Protocolo Fit90</span> - Sin dietas extremas ni rutinas imposibles
+              </span>
+            )}
+            {variant === 'B' && (
+              <span>
+                Baja la panza y recupera tu energía y vitalidad en 90 días con solo 3 horas a la semana a través del <span className="text-[#fcff37]">MÉTODO FIT90 de manera 100% natural.</span>
+              </span>
+            )}
           </h1>
           <section className="relative">
             <div
@@ -73,7 +80,7 @@ export default function Home() {
             </div>
           </section>
           <p className="mt-4 text-center text-[16px] max-w-[700px] mx-auto">
-            <strong>PASO 2 de 2:</strong> Agenda una Llamada si te gustaria Trabajar con Nosotros.
+            <strong>PASO 2 de 2:</strong> Agenda una Llamada si te gustaria entrar al programa y empezar tu cambio.
           </p>
 
           {/* Botón bloqueado 5 minutos */}
@@ -86,12 +93,7 @@ export default function Home() {
                 setIsFormOpened(true);
               }}
             >
-              {variant === 'A' && (
-                <span>¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!</span>
-              )}
-              {variant === 'B' && (
-                <span>¡QUIERO AGENDAR MI EVALUACIÓN GRATUITA!</span>
-              )}
+              <span>¡AGENDAR MI SESIÓN DE DIAGNÓSTICO!</span>
             </button>
             <p className="text-center mt-4 text-white/60 italic mx-auto max-w-[350px] text-[14px]">
               {isUnlocked
