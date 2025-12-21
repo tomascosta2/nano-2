@@ -308,10 +308,16 @@ export default function CalificationFormDirect({ variant }: Props) {
     try {
       setLoading(true);
 
+      const normalizedPhone = `${data.codigoPais}${data.telefono}`.replace(/[\s+]/g, "")
+
       await fetch('https://hook.us2.make.com/4440nxy5471reiw1q18qotjc15rveijb', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify([{ ...data, variant }]),
+        body: JSON.stringify([
+          { ...data,
+            normalizedPhone: normalizedPhone.replace("+", ""), 
+            variant }
+        ]),
       });
 
       const isQualified =
