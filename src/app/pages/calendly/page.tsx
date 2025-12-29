@@ -85,28 +85,14 @@ export default function CalendlyFast() {
 			{/* HERO + contenido tuyo igual que antes… */}
 			<section className="pt-8 pb-[80px]">
 				<div className="max-w-[1200px] mx-auto px-4">
+
+					<img className="h-[40px] mx-auto mb-4" src="/images/reviews-nano.png" alt="Nano Ponce Fitness" />
+
 					<h1 className="text-[24px] md:text-[32px] font-bold leading-[120%] max-w-[800px] mx-auto text-center">
-						<span className="text-[#fcff37]">¡Último paso!</span> Elegí una fecha y hora que te queden cómodas y empezá hoy mismo!
+						<span className="text-[#fcff37]">¡Último paso!</span> Elegí una fecha y hora que te queden cómodas para agendar tu consulta!
 					</h1>
 
-					<div className="grid md:grid-cols-2 gap-8 mt-8">
-						{/* Columna de textos (igual que la tuya) */}
-						<div className="md:-order-1 order-2">
-							<h2 className="text-[20px] sm:text-[28px] font-bold leading-[120%] mb-6 sm:mb-8 text-white">
-								Nuestros clientes bajan entre 6 y 15 kg de grasa corporal en 3 meses. <span className="underline">Vos también podés</span>. Agenda una llamada y vamos a hablar de:
-							</h2>
-							<ul className="mb-8 text-[18px]">
-								<li>✅ Cómo bajar de peso sin dietas extremas ni rutinas imposibles</li>
-								<li>✅ El método para hombres ocupados que garantiza resultados visibles y duraderos</li>
-								<li>✅ Cómo mantener los resultados a largo plazo sin morir en el intento</li>
-							</ul>
-							<p className="text-[15px] sm:text-[18px] text-white">
-								Te <strong>garantizamos</strong> que te vas con ideas claras de cómo bajar de peso de un experto certificado.
-							</p>
-							<div className="mt-8 hidden md:block">
-								<img className="h-[40px]" src="/images/reviews-nano.png" alt="Nano Ponce Fitness" />
-							</div>
-						</div>
+					<div className="gap-8 mt-8">					
 
 						{/* Calendly ultra rápido con iframe directo */}
 						<div className="bg-white w-full min-h-[600px] rounded-lg overflow-clip relative">
@@ -137,7 +123,7 @@ export default function CalendlyFast() {
 						<p>En caso de no encontrar horarios disponibles escribime por WhatsApp al <a className="underline text-blue-500" href="https://wa.me/5491136857548">+54 9 11 3685-7548</a></p>
 
 						<div className="mt-8 md:hidden block mx-auto">
-							<img className="h-[40px]" src="/images/reviews-nano.png" alt="Nano Ponce Fitness" />
+							<img className="h-[40px] mx-auto" src="/images/reviews-nano.png" alt="Nano Ponce Fitness" />
 						</div>
 					</div>
 				</div>
