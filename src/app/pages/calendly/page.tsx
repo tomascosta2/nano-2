@@ -120,7 +120,7 @@ export default function CalendlyFast() {
 							/>
 						</div>
 
-						<p>En caso de no encontrar horarios disponibles escribime por WhatsApp al <a className="underline text-blue-500" href="https://wa.me/5491136857548">+54 9 11 3685-7548</a></p>
+						{/* <p>En caso de no encontrar horarios disponibles escribime por WhatsApp al <a className="underline text-blue-500" href="https://wa.me/5491136857548">+54 9 11 3685-7548</a></p> */}
 
 						<div className="mt-8 md:hidden block mx-auto">
 							<img className="h-[40px] mx-auto" src="/images/reviews-nano.png" alt="Nano Ponce Fitness" />
